@@ -1,0 +1,31 @@
+.code-import {
+    color: #b27aad;
+}
+
+.code-attribute {
+    color: #ce9178;
+}
+
+.code-attribute-name {
+    color: #9cdcfe;
+}
+
+.code-attribute-value {
+    color: #b0c9a4;
+}
+
+.code-tag {
+    color: #569cd6;
+}
+
+.code-tag-wrapper {
+    color: #777777;
+}
+
+.code-css-name {
+    color: #d7ba7d;
+}
+
+.code-comment {
+    color: #6a9955;
+}

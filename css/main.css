@@ -21,6 +21,10 @@ section {
     width: 80vw;
 }
 
+#main .container {
+    text-align: left;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: #333333;
     font-weight: 400;
