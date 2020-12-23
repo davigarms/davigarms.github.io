@@ -1,3 +1,4 @@
+@import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400");
 
 body {
@@ -6,40 +7,6 @@ body {
     display: flex;
     width: 300vw;
 }
-
-section {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 720px;
-    text-align: right;
-    width: 80vw;
-}
-
-#main .container {
-    text-align: left;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #333333;
-    font-weight: 400;
-}
-
-h1 {
-    font-size: 28px;
-    margin-bottom: 0;
-}
-
-    @media screen and (min-width: 992px) {
-        h1 {
-            font-size: 48px;
-        }
-    }
 
 p {
     color: #333333;
@@ -51,22 +18,79 @@ em {
     font-style: normal;
 }
 
-button,
-button:focus,
-button:active {
-    background:none;
-    border:1px solid #333333;
-    border-radius: 6px;
-    font-size: 18px;
-    line-height: 1;
-    margin-top: 10px;
-	outline:none;
-    padding: 14px 18px;
+
+a {
+    display: block;
 }
 
-button span {
-    color: #333333;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+    ul li {
+        display: inline;
+    }
+
+.center {
+    text-align: center;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+   
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 720px;
+    text-align: right;
+    width: 80vw;
+}
+
+#projects {
+    background-color: #eeeeee;
+}
+
+#contact .container {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 0;
+}
+    @media screen and (min-width: 992px) {
+        h1 {
+            font-size: 48px;
+        }
+    }
+
+h2 {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+@media screen and (min-width: 992px) {
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        #projects h2 {
+            position: absolute; 
+            right: 10vw;
+            bottom: 100px;
+        }
+    }
 
 #main p {
     font-size: 18px;
@@ -78,3 +102,93 @@ button span {
             font-size: 24px;
         }
     }
+
+label {
+    font-size: 1px;
+    line-height: 1;
+    position: absolute;
+    top: -10000px;
+}
+
+input, textarea {
+    background: none;
+    border:1px solid #aaaaaa;
+    border-radius: 4px;
+    color: #666666;
+    font-weight: 300;
+    line-height: 1;
+    margin: 20px 0 0;
+    outline:none;
+    padding: 10px 12px;
+    width: calc(100% - 28px);
+}
+
+::placeholder {
+    color: #666666;
+    opacity: 1;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+    width: calc(100% - 28px);
+}
+
+
+button,
+button:focus,
+button:active,
+input[type=submit] {
+    background:none;
+    border:1px solid #aaaaaa;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 10px;
+	outline:none;
+    padding: 14px 18px;
+    width: initial;
+}
+
+button span {
+    color: #333333;
+}
+
+input[type=submit] {
+    margin-top: 30px;
+    border:1px solid #aaaaaa;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+button.icon {
+    border:1px solid #666666;
+    margin: 80px 5px 0;
+    border-radius: 50%;
+    padding: 10px 12px;
+}
+    .icon:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        color: #333333;
+        display: inline-block;
+        font-family: 'Font Awesome 5 Free';
+        font-style: normal;
+        font-size: 21px;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 1;
+        text-rendering: auto;
+        text-transform: none !important;
+    }
+        .icon.brands:before {
+            font-family: 'Font Awesome 5 Brands';
+        }
+
+    button.icon span {
+        display: none;
+    }
+
