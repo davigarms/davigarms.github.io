@@ -1,5 +1,14 @@
 body {
     background-color: #1e1e1e;
+    
+}
+
+section {
+    background-color: #1e1e1e;
+}
+
+#projects {
+    background-color: #242424;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,4 +27,16 @@ button:active {
 
 button span {
     color: #c1c1c1;
+}
+
+.code-attribute {
+    color: #ce9178!important;
+}
+
+input, textarea {
+    color: #ce9178;
+}
+
+::placeholder {
+    color: #ce9178;
 }

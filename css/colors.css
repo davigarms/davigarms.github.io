@@ -1,31 +1,29 @@
 .code-import {
-    color: #b27aad;
+    color: #b27aad!important;
 }
 
-.code-attribute {
-    color: #ce9178;
-}
+
 
 .code-attribute-name {
-    color: #9cdcfe;
+    color: #9cdcfe!important;
 }
 
 .code-attribute-value {
-    color: #b0c9a4;
+    color: #b0c9a4!important;
 }
 
 .code-tag {
-    color: #569cd6;
+    color: #569cd6!important;
 }
 
 .code-tag-wrapper {
-    color: #777777;
+    color: #777777!important;
 }
 
 .code-css-name {
-    color: #d7ba7d;
+    color: #d7ba7d!important;
 }
 
 .code-comment {
-    color: #6a9955;
+    color: #6a9955!important;
 }
