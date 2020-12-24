@@ -27,7 +27,7 @@ body {
 }
 
 p {
-    color: #333333;
+    color: #484848;
     font-weight: 300;
     line-height: 1.6;
 }
@@ -61,6 +61,30 @@ ul {
     text-align: center;
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+    color: #484848;
+    font-weight: 300;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+}
+
+h2 {
+    margin-bottom: 0.313rem;
+    font-size: 1.95rem;
+}
+    @media screen and (min-width: 992px) {
+        #projects h2 {
+            position: absolute; 
+            right: 10vw;
+            bottom: 6.25rem;
+        }
+    }
+
 section {
     align-items: center;
     background-color: #ffffff;
@@ -84,29 +108,6 @@ section {
 #contact .container {
     text-align: center;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    color: #333333;
-    font-weight: 300;
-    margin: 0;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 0.3rem;
-}
-
-h2 {
-    margin-bottom: 0.313rem;
-    font-size: 1.95rem;
-}
-    @media screen and (min-width: 992px) {
-        #projects h2 {
-            position: absolute; 
-            right: 10vw;
-            bottom: 6.25rem;
-        }
-    }
 
 #main p {
     font-size: 1.05rem;
@@ -158,11 +159,12 @@ input[type=submit] {
     font-weight: 400;
     outline:none;
     position: relative;
+    text-transform: uppercase;
 }
 
 button,
 input[type=submit] {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     height: 2.5rem;
     line-height: 2.25rem;
     margin-top: 0.625rem;
