@@ -2,8 +2,6 @@
     color: #b27aad!important;
 }
 
-
-
 .code-attribute-name {
     color: #9cdcfe!important;
 }
@@ -26,4 +24,8 @@
 
 .code-comment {
     color: #6a9955!important;
+}
+
+#main em {
+    font-weight: 300;
 }

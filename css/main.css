@@ -7,6 +7,20 @@ body {
     font-size: 100%;
 }
 
+.social {
+    margin-top: 30px;
+    z-index: 1;
+}   
+    @media screen and (min-width: 992px) {
+        .social {
+            margin-top: 0;
+            position: fixed;
+            right: 1rem;
+            top: 0.5rem;
+            z-index: 1;
+        }
+    }
+
 .wrapper {
     display: flex;
     width: 300vw;
@@ -28,10 +42,10 @@ a {
     font-weight: 400;
     left: 0;
     height: 100%;
+    position: absolute;
     top: 0;
     text-decoration: none;
     width: 100%;
-    position: absolute;
 }
 
 ul {
@@ -56,18 +70,11 @@ section {
     width: 100vw;
 }
 
-.social {
-    position: fixed;
-    z-index: 1;
-    top: 0.625rem;
-    right: 0.625rem;
-}
-
 .container {
     margin: 0 auto;
     max-width: 680px;
     text-align: right;
-    width: 80vw;
+    width: 84vw;
 }
 
 #projects {
@@ -173,8 +180,10 @@ input[type=submit] {
 }
 
 button.icon {
-    border: none;
-    width: 2.5rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.7rem;
 }
     .icon:before {
         -moz-osx-font-smoothing: grayscale;
@@ -183,7 +192,7 @@ button.icon {
         display: inline-block;
         font-family: 'Font Awesome 5 Free';
         font-style: normal;
-        font-size: 1.8rem;
+        font-size: 0.75rem;
         font-variant: normal;
         font-weight: 400;
         text-rendering: auto;

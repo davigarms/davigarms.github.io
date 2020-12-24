@@ -29,14 +29,20 @@ button span {
     color: #c1c1c1;
 }
 
-.code-attribute {
-    color: #ce9178!important;
+
+input[type=submit],
+button a {
+    color: #569cd6;
 }
 
 input, textarea {
-    color: #ce9178;
+    color: #c1c1c1;
 }
 
 ::placeholder {
-    color: #ce9178;
+    color: #c1c1c1;
+}
+
+.icon::before {
+    color: #c1c1c1;
 }
