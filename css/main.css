@@ -23,7 +23,7 @@ body {
 
 .wrapper {
     display: flex;
-    width: 300vw;
+    width: 400vw;
 }
 
 p {
@@ -78,7 +78,8 @@ h2 {
     font-size: 1.95rem;
 }
     @media screen and (min-width: 992px) {
-        #projects h2 {
+        #projects h2,
+        #skills h2 {
             position: absolute; 
             right: 10vw;
             bottom: 6.25rem;
@@ -101,7 +102,11 @@ section {
     width: 84vw;
 }
 
-#projects {
+#skills {
+    background-color: #f4f4f4;
+}
+
+#contact {
     background-color: #f4f4f4;
 }
 
@@ -115,8 +120,6 @@ section {
 }
 
 label {
-    font-size: 1px;
-    line-height: 1;
     position: absolute;
     top: -10000px;
 }
