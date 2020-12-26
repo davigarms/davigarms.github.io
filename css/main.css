@@ -1,6 +1,17 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400");
 
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+@media screen and (min-width: 992px) {
+        html, body {
+            overflow-y: initial;
+        }
+    }
+
 body {
     background-color: #FFFFFF;
     font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
@@ -23,7 +34,25 @@ body {
 
 .wrapper {
     display: flex;
-    width: 400vw;
+    height: 100%;
+    overflow: hidden;
+    width: 400%;
+}
+
+section {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    flex: 1 1 100%;
+    position: relative;
+    vertical-align: middle;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 680px;
+    text-align: right;
+    width: 84%;
 }
 
 p {
@@ -61,7 +90,6 @@ ul {
     text-align: center;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
     color: #404040;
     font-weight: 300;
@@ -81,27 +109,11 @@ h2 {
         #projects h2,
         #skills h2 {
             position: absolute; 
-            right: 10vw;
+            right: 10%;
             bottom: 6.25rem;
         }
     }
 
-section {
-    align-items: center;
-    background-color: #ffffff;
-    background-attachment: fixed;
-    display: flex;
-    height: 100vh;
-    position: relative;
-    width: 100vw;
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 680px;
-    text-align: right;
-    width: 84vw;
-}
 
 #skills {
     background-color: #f4f4f4;
