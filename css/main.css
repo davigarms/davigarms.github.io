@@ -63,7 +63,7 @@ ul {
 
 
 h1, h2, h3, h4, h5, h6 {
-    color: #484848;
+    color: #404040;
     font-weight: 300;
     margin: 0;
 }
@@ -89,6 +89,7 @@ h2 {
 section {
     align-items: center;
     background-color: #ffffff;
+    background-attachment: fixed;
     display: flex;
     height: 100vh;
     position: relative;
@@ -193,7 +194,7 @@ button.icon {
     .icon:before {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
-        color: #606060;
+        color: #454545;
         display: inline-block;
         font-family: 'Font Awesome 5 Free';
         font-style: normal;
@@ -215,7 +216,6 @@ button.icon {
 html {
     font-size: 13pt;
 }
-
     @media screen and (min-width: 992px) {
         html {
             font-size: 16pt;
