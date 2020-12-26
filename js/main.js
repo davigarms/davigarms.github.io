@@ -11,7 +11,6 @@ const initEvents = () => {
 const handleClick = (e) => {
     e.preventDefault();
     const targetId = document.querySelector(e.target.getAttribute("href"));
-    if (window.history && window.history.pushState) history.pushState("", document.title, e.target.getAttribute("href"));
     targetId.scrollIntoView({behavior: "smooth"})
 }
 

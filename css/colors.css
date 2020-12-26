@@ -1,35 +1,11 @@
-.code-import {
-    color: #b27aad!important;
-}
-
-.code-attribute-name {
-    color: #9cdcfe!important;
-}
-
-.code-attribute-value {
-    color: #b0c9a4!important;
-}
-
-.code-tag {
-    color: #569cd6!important;
+h1, h2, h3, h4, h5, h6 {
+    color: #569cd6;
 }
 
 .code-tag-wrapper {
-    color: #777777!important;
-}
-
-.code-css-name {
-    color: #d7ba7d!important;
-}
-
-.code-comment {
-    color: #c6d3c1!important;
+    color: #777777;
 }
 
 #main em {
-    font-weight: 300;
-}
-
-button a {
-    color: #d7ba7d!important;
+    
 }
