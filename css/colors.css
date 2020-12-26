@@ -23,9 +23,13 @@
 }
 
 .code-comment {
-    color: #6a9955!important;
+    color: #c6d3c1!important;
 }
 
 #main em {
     font-weight: 300;
+}
+
+button a {
+    color: #d7ba7d!important;
 }

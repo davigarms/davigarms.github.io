@@ -1,31 +1,30 @@
 const sections = Array.from(document.querySelectorAll("section"));
 
 const initEvents = () => {
+    const wrapper = document.querySelector(".wrapper");
     const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("button-nav") !== null);
     navButtons.forEach(button =>  button.addEventListener("click", handleClick));
-    window.addEventListener("scroll", handleScroll);
-    activateSection(getSection());
+    wrapper.addEventListener("scroll", handleScroll);
+    activateSection(getSection(wrapper));
 }
 
 const handleClick = (e) => {
-    if (window.innerWidth > 992) {
-        e.preventDefault();
-        const targetId = document.querySelector(e.target.getAttribute("href"));
-        if (window.history && window.history.pushState) history.pushState("", document.title, e.target.getAttribute("href"));
-        gsap.to(window, {duration: .75, ease: "power2.inOut", scrollTo: targetId});
-    }
+    e.preventDefault();
+    const targetId = document.querySelector(e.target.getAttribute("href"));
+    if (window.history && window.history.pushState) history.pushState("", document.title, e.target.getAttribute("href"));
+    targetId.scrollIntoView({behavior: "smooth"})
 }
 
 const handleScroll = (e) => {
-    activateSection(getSection());
+    setTimeout(() => activateSection(getSection(e.target)), 300);;
 }
 
-const getSection = () => {
+const getSection = (wrapper) => {
     let activeIndex = 0;
     sections.forEach((section, index) => {
-        const next = sections[index+1] === undefined ? sections[index] : sections[index+1];
-        if (window.pageXOffset >= section.offsetLeft && 
-            window.pageXOffset <= next.offsetLeft) {
+        console.log(index, wrapper.scrollLeft, section.offsetWidth * index - 300)
+        if (wrapper.scrollLeft >= section.offsetWidth * index - 300 && 
+            wrapper.scrollLeft < section.offsetWidth * (index + 1)) {
             activeIndex = index;
         }
     });
