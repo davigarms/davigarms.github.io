@@ -21,7 +21,6 @@ const handleScroll = (e) => {
 const getSection = (wrapper) => {
     let activeIndex = 0;
     sections.forEach((section, index) => {
-        console.log(index, wrapper.scrollLeft, section.offsetWidth * index - 300)
         if (wrapper.scrollLeft >= section.offsetWidth * index - 300 && 
             wrapper.scrollLeft < section.offsetWidth * (index + 1)) {
             activeIndex = index;
@@ -31,7 +30,12 @@ const getSection = (wrapper) => {
 }
 
 const activateSection = (activeSection) => {
-    sections.forEach(section => section.classList.remove('active'));
+    sections.forEach((section, index) => {
+        section.classList.remove('active');
+        section.classList.remove('reverted');
+        if (index < sections.indexOf(activeSection))
+            section.classList.add('reverted');
+    });
     activeSection.classList.add('active');
 }
 
