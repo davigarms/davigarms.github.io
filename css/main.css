@@ -51,7 +51,7 @@ section {
 section .container {
     display: flex;
     flex-direction: column;
-    filter: blur(.3rem);
+    filter: blur(.15rem);
     height: calc(100% - 60px);
     margin: 0 auto;
     max-width: 700px;
@@ -175,12 +175,13 @@ h2 {
 
 label {
     color: #404040;
-    position: relative;
-    top: 0.95rem;
-    left: 0;
-    font-size: 0.8rem;
     float: left;
+    font-size: 0.8rem;
+    font-weight: 400;
+    left: 0;
+    top: 0.95rem;
     padding-left: 0.3rem;
+    position: relative;
 }
 
 input, textarea {
