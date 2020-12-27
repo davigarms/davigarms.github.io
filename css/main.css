@@ -63,7 +63,7 @@ section .container {
     section .container {
         display: flex;
         flex-direction: column;
-        height: 95%;
+        height: calc(100% - 60px);
     }
         @media screen and (min-width: 992px) {
             section .container {
