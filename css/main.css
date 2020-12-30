@@ -61,9 +61,7 @@ section .container {
     transform: translateX(-70px);
     transition: all 400ms 50ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
     width: 75%;
-}
-section.reverted .container {
-    transform: translateX(70px);
+    justify-content: space-evenly;
 }
     @media screen and (min-width: 992px) {
         section .container {
@@ -71,48 +69,47 @@ section.reverted .container {
         }
     }
 
+    section.reverted .container {
+        transform: translateX(70px);
+    }
+    
     section#main .container
     {
         text-align: right;
         align-items: flex-end;
-        justify-content: space-evenly;
     }
 
-    section#contact .container
-    {
-        justify-content: space-evenly;
-    }
         section#main .container > *,
         section#contact .container > * {
             margin: 0;
         }
+        
         section#contact .container h2 {
             padding-top: 2rem;
         }
 
     section#skills .container,
     section#projects .container {
-        width: 100%;
-        min-height: 80%;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: 80%;
         max-width: initial;
+        width: 100%;
     }
         @media screen and (min-width: 992px) {
-            section#skills .container,
-            section#projects .container {
-                justify-content: flex-end;
-                text-align: right;
-            }
-                section#skills .container h2,
-                section#projects .container h2 {
-                    padding-right: 50px
-                }
-
             section#contact .container {
                 height: 70%;
             }
                 section#contact .container h2 {
                     padding-top: 0;
                 }
+
+                section#skills .container h2,
+                section#projects .container h2 {
+                        text-align: right;
+                        padding-right: 50px
+                    }
+            
         }
     
     section.active .container {
@@ -140,7 +137,7 @@ ul {
     margin: 0;
     padding: 0;
 }
-    ul li {
+    ul.social li {
         display: inline-block;
     }
 
