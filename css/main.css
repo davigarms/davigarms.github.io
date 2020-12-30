@@ -102,7 +102,7 @@ section .container {
         }
 
         section#skills .container h2 {
-            /* display: none; */
+            display: none;
             margin-bottom: 1.25rem;
             padding-right: 3rem;
             text-align: right;
