@@ -37,16 +37,19 @@ section {
     position: relative;
     scroll-snap-align: center;
 }
-    section#skills {
+    section#main {
         background-color: #f4f4f4;
+
+    }
+
+    section#projects {
+        background-color: #f4f4f4;
+    }
+
+    section#skills {
         align-items: flex-end;
     }
 
-    section#contact {
-        background-color: #f4f4f4;
-    }
-
-    
 
     @media screen and (min-width: 992px) {
         section {
@@ -95,12 +98,13 @@ section .container {
 
     section#skills .container {
         max-width: initial;
-        padding: 2rem 0;
+        padding: 0;
+        height: 100%;
     }
         @media screen and (min-width: 992px) {
             section#skills .container {
                 height: 90%;
-                flex-direction: column-reverse;
+                /* flex-direction: column-reverse; */
                 justify-content: space-between;
                 padding: 0;
             }
@@ -109,7 +113,7 @@ section .container {
         section#skills .container h2 {
             display: none;
             margin-bottom: 1.25rem;
-            padding-right: 3rem;
+            padding-right: 2rem;
             text-align: right;
         }
         
@@ -118,8 +122,13 @@ section .container {
             /* display: flex; */
             /* align-items: center; */
             overflow: auto;
-            padding: 0 8%;
+            padding: 2rem 1.2rem;
         }
+        @media screen and (min-width: 992px) {
+                section#skills .container ul {
+                    padding: 0 10%;
+                }
+            }
 
         section#skills .container li {
             flex: 1 1 1px;
@@ -177,7 +186,8 @@ section .container {
     section#projects .container {
         justify-content: flex-start;
         max-width: initial;
-        padding: 0;
+        padding: 2rem 0;
+        width: 100%;
     }
         @media screen and (min-width: 992px) {
             section#projects .container {
@@ -186,19 +196,38 @@ section .container {
                 justify-content: space-between;
             }
         }
+
+        section#projects .container h2 {
+            margin-bottom: 1.25rem;
+            text-align: center;
+        }
+        @media screen and (min-width: 992px) {
+            section#projects .container h2 {
+                    padding-right: 2rem;
+                    text-align: right;
+                }
+            }
     
     section#contact .container {
         text-align: center;
     }
-        @media screen and (min-width: 992px) {
-            section#contact .container {
-                height: 70%;
+    @media screen and (min-width: 992px) {
+        section#contact .container {
+            height: 70%;
+        }
+    }
+        section#contact .container h2 {
+            padding-top: 2rem;
+        }
+        section#contact .container .content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+            section#contact .container .content > * {
+                margin: 0;
             }
-        }
-        
-        section#contact .container > * {
-            margin: 0;
-        }
 
 p {
     color: #484848;
