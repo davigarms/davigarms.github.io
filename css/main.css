@@ -37,10 +37,16 @@ section {
     position: relative;
     scroll-snap-align: center;
 }
-    section#skills,
+    section#skills {
+        background-color: #f4f4f4;
+        align-items: flex-end;
+    }
+
     section#contact {
         background-color: #f4f4f4;
     }
+
+    
 
     @media screen and (min-width: 992px) {
         section {
@@ -88,13 +94,12 @@ section .container {
         }
 
     section#skills .container {
-        justify-content: flex-start;
         max-width: initial;
         padding: 2rem 0;
     }
         @media screen and (min-width: 992px) {
             section#skills .container {
-                height: 80%;
+                height: 90%;
                 flex-direction: column-reverse;
                 justify-content: space-between;
                 padding: 0;
