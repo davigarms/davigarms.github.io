@@ -21,7 +21,7 @@ const handleScroll = (e) => {
 const getSection = (wrapper) => {
     let activeIndex = 0;
     sections.forEach((section, index) => {
-        if (wrapper.scrollLeft >= section.offsetWidth * index - 300 && 
+        if (wrapper.scrollLeft >= section.offsetWidth * index - window.innerWidth/3 && 
             wrapper.scrollLeft < section.offsetWidth * (index + 1)) {
             activeIndex = index;
         }
