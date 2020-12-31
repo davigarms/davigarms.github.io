@@ -165,8 +165,7 @@ section .container {
 
             section#skills .container .content p {
                 margin-top: 0;
-                font-size: .95rem;
-                /* text-align: justify; */
+                font-size: .9rem;
             }
                 @media screen and (min-width: 992px) {
                     section#skills .container .content p {
