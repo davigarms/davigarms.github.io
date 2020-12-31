@@ -234,7 +234,7 @@ section .container {
 
 p {
     color: #484848;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.05rem;
     line-height: 1.6;
 }
@@ -326,8 +326,9 @@ input[type=submit] {
     background:none;
     border:3px solid #aaaaaa;
     border-radius: 0.25rem;
-    line-height: 2.3rem;
+    font-weight: 500;
     height: 2.5rem;
+    line-height: 2.3rem;
     margin-top: 0.625rem;
     outline:none;
     overflow: hidden;
