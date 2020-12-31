@@ -123,7 +123,7 @@ section .container {
             /* align-items: center; */
             /* margin-bottom: 1rem; */
             overflow: auto;
-            padding: 2rem 1.2rem 0;
+            padding: 2rem .9rem 0;
         }
         @media screen and (min-width: 992px) {
                 section#skills .container ul {
@@ -134,13 +134,17 @@ section .container {
         section#skills .container li {
             flex: 1 1 1px;
             position: relative;
-            margin-bottom: .5rem;
+            margin-bottom: .7rem;
         }
+            section#skills .container li:last-child {
+                margin-bottom: 5rem;
+            }
+
         
         section#skills .container .content {
             /* max-height: 225px; */
             overflow: hidden;
-            text-align: right;
+            text-align: left;
             padding: 0 1.2rem;
         }
             @media screen and (min-width: 992px) {
@@ -150,18 +154,18 @@ section .container {
             }
 
             section#skills .container .content h3 {
-                margin-bottom: 0.5rem;
-                font-size: 1.1rem;
+                margin-bottom: 0.6rem;
+                font-size: 1.25rem;
             }
             @media screen and (min-width: 992px) {
                 section#skills .container .content h3 {
-                        font-size: 1.2rem;
+                        font-size: 1.1rem;
                     }
                 }
 
             section#skills .container .content p {
                 margin-top: 0;
-                font-size: .85rem;
+                font-size: .95rem;
                 /* text-align: justify; */
             }
                 @media screen and (min-width: 992px) {
@@ -170,7 +174,7 @@ section .container {
                     }
                 }
 
-        section#skills .container button {
+        section#skills .container ul li button {
             display: none;
             border: none;
             border-radius: .2rem;
@@ -224,7 +228,7 @@ section .container {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-            justify-content: space-between;
+            justify-content: space-around;
         }
             section#contact .container .content > * {
                 margin: 0;
@@ -233,7 +237,7 @@ section .container {
 p {
     color: #484848;
     font-weight: 400;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
     @media screen and (min-width: 992px) {
