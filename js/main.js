@@ -11,7 +11,11 @@ const initEvents = () => {
 const handleClick = (e) => {
     e.preventDefault();
     const targetId = document.querySelector(e.target.getAttribute("href"));
-    targetId.scrollIntoView({behavior: "smooth"})
+    if (window.innerWidth > 768) {
+        targetId.scrollIntoView({behavior: "smooth"});
+    } else {
+        targetId.scrollIntoView();
+    }
 }
 
 const handleScroll = (e) => {
@@ -21,7 +25,7 @@ const handleScroll = (e) => {
 const getSection = (wrapper) => {
     let activeIndex = 0;
     sections.forEach((section, index) => {
-        if (wrapper.scrollLeft >= section.offsetWidth * index - window.innerWidth/3 && 
+        if (wrapper.scrollLeft >= section.offsetWidth * index - window.innerWidth/2 && 
             wrapper.scrollLeft < section.offsetWidth * (index + 1)) {
             activeIndex = index;
         }
