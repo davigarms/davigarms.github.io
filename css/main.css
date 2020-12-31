@@ -324,7 +324,7 @@ button:focus,
 button:active,
 input[type=submit] {
     background:none;
-    border:1px solid #aaaaaa;
+    border:3px solid #aaaaaa;
     border-radius: 0.25rem;
     line-height: 2.3rem;
     height: 2.5rem;
@@ -341,7 +341,7 @@ input[type=submit] {
         height: 102%;
         position: absolute;
         top: 0;
-        width: 100%;
+        width: 102%;
     }
         button a:before {
             content: attr(data-content);
@@ -375,6 +375,7 @@ input[type=submit] {
 }
 
 button.icon {
+    border:1px solid #aaaaaa;
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
@@ -420,7 +421,6 @@ button.icon {
     button.icon span {
         opacity: 0;
     }
-
     
 .social {
     position: relative;
@@ -434,7 +434,6 @@ button.icon {
             z-index: 1;
         }
     }
-
     
 .desktop-only {
     display: none;
