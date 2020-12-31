@@ -324,7 +324,7 @@ button:focus,
 button:active,
 input[type=submit] {
     background:none;
-    border:2px solid #aaaaaa;
+    border:1px solid #aaaaaa;
     border-radius: 0.25rem;
     font-weight: 500;
     height: 2.5rem;
