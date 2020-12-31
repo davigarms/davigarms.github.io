@@ -122,7 +122,7 @@ section .container {
             /* align-items: center; */
             /* margin-bottom: 1rem; */
             overflow: auto;
-            padding: 2rem .9rem 0;
+            padding: 2rem .8rem 0;
         }
         @media screen and (min-width: 992px) {
                 section#skills .container ul {
@@ -164,7 +164,7 @@ section .container {
 
             section#skills .container .content p {
                 margin-top: 0;
-                font-size: .8rem;
+                font-size: .9rem;
             }
                 @media screen and (min-width: 992px) {
                     section#skills .container .content p {
