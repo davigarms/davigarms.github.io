@@ -235,23 +235,29 @@ section .container {
 p {
     color: #484848;
     font-weight: 400;
-    line-height: 1.6;
 }
     @media screen and (min-width: 992px) {
         p {
             font-weight: 300;
-            
         }
     }
 
     section#main p {
         font-size: 1.1rem;
+        line-height: 1.7;
     }
         @media screen and (min-width: 992px) {
             section#main p {
                 font-size: 1.2rem;
+                line-height: 1.6;
             }
         }
+
+
+section#main h1 {
+    line-height: 1.1;
+}
+    
 
 em {
     font-style: normal;
