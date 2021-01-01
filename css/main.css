@@ -68,7 +68,7 @@ section .container {
     position: relative;
     transform: translateX(-70px);
     transition: all 100ms 100ms;
-    padding: 0 12%;;
+    padding: 0 11%;
     justify-content: space-evenly;
 }
 @media screen and (min-width: 992px) {
@@ -235,14 +235,23 @@ section .container {
 p {
     color: #484848;
     font-weight: 400;
-    font-size: 1.05rem;
     line-height: 1.6;
 }
     @media screen and (min-width: 992px) {
         p {
             font-weight: 300;
+            
         }
     }
+
+    section#main p {
+        font-size: 1.1rem;
+    }
+        @media screen and (min-width: 992px) {
+            section#main p {
+                font-size: 1.2rem;
+            }
+        }
 
 em {
     font-style: normal;
