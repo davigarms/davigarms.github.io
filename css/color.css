@@ -27,14 +27,21 @@ h1, h2, h3 {
 }
 
 .dark p, .dark input, .dark label, .dark a {
-    color: #dadada!important;
+    color: #dadada;
 }
 
 .dark h1, .dark h2, .dark h3 {
-    color: #676767!important;
+    color: #676767;
 }
 
 .dark button, .dark input[type=submit], .dark textarea, .dark input  {
     border: 1px #aaaaaa solid;
 }
 
+
+
+/* Dark colors */
+
+.dark h1, .dark h2, .dark h3 {
+    color: #569bd5;
+}
