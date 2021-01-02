@@ -32,19 +32,27 @@ body {
 
 section {
     align-items: baseline;
-    background-color: #ffffff;
     display: flex;
     flex: 0 0 100%;
     position: relative;
     scroll-snap-align: center;
 }
     section#main {
-        background-color: #f4f4f4;
+        background-color: #e2e2e2;
+
+    }
+
+    section#skills {
+        background-color: #e9e9e9;
 
     }
 
     section#projects {
-        background-color: #f4f4f4;
+        background-color: #e2e2e2;
+    }
+
+    section#contact {
+        background-color: #e9e9e9;
     }
 
     section#skills {
@@ -235,7 +243,7 @@ section .container {
 p {
     color: #484848;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.8;
 }
     @media screen and (min-width: 992px) {
         p {
@@ -294,9 +302,9 @@ h2 {
 }
 
 label {
-    color: #404040;
+    color: #666666;
     float: left;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 400;
     left: 0;
     top: 0.95rem;
@@ -367,7 +375,7 @@ input[type=submit] {
         button a:after {
             content: attr(data-content);
             color: #dedede;
-            background-color: #404040;
+            background-color: #505050;
             height: 102%;
             left: 0;
             position: absolute;
@@ -420,7 +428,7 @@ button.icon {
     button.icon a:hover {
         transform: initial;
         color: #dedede;
-        background-color: #505050;
+        background-color: #555555;
         transform: scale(1.12,1.12);
     }
 
@@ -474,3 +482,7 @@ button.icon {
     text-align: center;
 }
     
+
+.code-tag-wrapper {
+    color: #999999;
+}

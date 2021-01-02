@@ -1,0 +1,31 @@
+.dark section#main {
+    background-color: #333334;
+
+}
+
+.dark section#skills {
+    background-color: #363637;
+
+}
+
+.dark section#projects {
+    background-color: #333334;
+
+}
+
+.dark section#contact {
+    background-color: #363637;
+
+}
+
+.dark p, .dark input, .dark label, .dark a {
+    color: #dadada!important;
+}
+
+.dark h1, .dark h2, .dark h3 {
+    color: #676767!important;
+}
+
+.dark button, .dark input[type=submit], .dark textarea, .dark input  {
+    border: 1px #aaaaaa solid;
+}
