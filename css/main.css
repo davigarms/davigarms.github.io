@@ -18,7 +18,6 @@ html {
         }
     }
 
-
 body {
     background-color: #FFFFFF;
     font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
@@ -240,7 +239,6 @@ button.icon {
                             sections
 ================================================================ */
 
-
 section {
     align-items: baseline;
     display: flex;
@@ -306,7 +304,6 @@ section .container {
         opacity: 1;
         transform: translateX(0);
     }
-
     
 
 /* ================================================================
@@ -336,7 +333,6 @@ section .container {
         line-height: 1.1;
     }
         
-
 
 
 /* ================================================================
@@ -382,7 +378,6 @@ section .container {
         }
         
         section#skills .container .text {
-            /* max-height: 225px; */
             overflow: hidden;
             text-align: left;
             padding: 0 1.2rem;
@@ -397,8 +392,8 @@ section .container {
                 margin-bottom: 0.6rem;
                 font-size: 1.25rem;
             }
-            @media screen and (min-width: 992px) {
-                section#skills .container .text h3 {
+                 @media screen and (min-width: 992px) {
+                    section#skills .container .text h3 {
                         font-size: 1.1rem;
                     }
                 }
@@ -416,37 +411,38 @@ section .container {
 /* ================================================================
                             projects
 ================================================================ */
-
                 
         section#projects .container {
             width: 100%;
             padding: 0;
             height: 100%;
             max-width: 1200px;
+            justify-content: flex-start;
         }
             @media screen and (min-width: 992px) {
                 section#projects .container {
                     height: 90%;
-                    justify-content: space-evenly;
-                    padding: 0 1rem;
                 }
             }
     
             section#projects .container h2 {
-                padding-top: 2rem;
+                padding: 2rem 0 0;
                 margin-bottom: 1.2rem;
                 text-align: center;
             }
                 @media screen and (min-width: 992px) {
                     section#projects .container h2 {
-                        padding-top: 0;
+                        padding: 0 2rem;
                         text-align: left;
                     }
                 }
             
             section#projects .container .content {
                 overflow: auto;
-                padding: 0 1.5rem;
+                padding: 1.5rem 0;
+                width: 100%;
+                margin: 0 auto;
+                flex-grow: 1;
             }
 
             section#projects .container ul {
@@ -456,12 +452,10 @@ section .container {
             }
     
             section#projects .container li {
-                /* border: 1px #a5a5a5 solid; */
-                /* filter: drop-shadow(2px 2px 8px rgba(0,0,0,.3)); */
-                flex: 1 1 13rem;
+                flex: 0 0 15rem;
                 position: relative;
-                margin: .1rem;
-                height: 12rem;
+                margin: .2rem;
+                height: 11rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -473,14 +467,12 @@ section .container {
                 width: 100%;
                 line-height: 2;
                 text-align: center;
-                /* bottom: 0; */
-                /* background-color: #dddddd; */
-                font-weight: 500;
-                font-size: .7rem;
+                font-weight: 400;
+                font-size: 0;
                 margin: 0;
                 filter: drop-shadow(2px 2px 1px rgba(0,0,0,.5));
                 opacity: 0;
-                transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
                 pointer-events: none;
                 position: absolute;
                 color: #fff;
@@ -489,51 +481,42 @@ section .container {
 
             section#projects .container li .img {
                 width: 100%;
-                transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-content: center;
-            } 
-
-            section#projects .container li img {
-                filter: saturate(70%);
-                width: 270%;
-            }
-
-            section#projects .container li .img:after {
-                content: "";
-                background-color: rgba(0, 0, 0, .5);
-                position: absolute;
-                width: 100%;
                 height: 100%;
-                top: 0;
-                left: 0;
-                z-index: 1;
-                opacity: 0;
-            }
-
-            section#projects .container li:hover {
-                /* transform: scale(1.05,1.05); */
-            }
-
-            section#projects .container li:hover .img {
-                transform: scale(1.1,1.1);
-            }
+            } 
+                section#projects .container li .img:after {
+                    content: "";
+                    position: absolute;
+                    width: calc(100% - 30px);
+                    height: calc(100% - 30px);
+                    border: 15px rgba(0, 0, 0, .55) solid;
+                    filter: blur(1rem);
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
             
-            section#projects .container li:hover .img img {
-                filter: saturate(130%);
-            }
+                section#projects .container li .img img {
+                    filter: saturate(30%);
+                    height: 100%;
+                    position: absolute;
+                    transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    left: 0;
+                }
+                    section#projects .container li:hover .img {
+                        transform: scale(1.09,1.09);
+                    }
+                        section#projects .container li:hover .img img {
+                            filter: saturate(130%);
+                        }
 
-            section#projects .container li:hover h3 {
-                opacity: 1;
-            }
-
-            section#projects .container .img:hover:after {
-                opacity: 1;
-            }
-                
-
+                    section#projects .container li:hover h3 {
+                        opacity: 1;
+                    }
 
             
 /* ================================================================
@@ -606,5 +589,5 @@ section .container {
 }
 
 .spacer {
-    height: 2rem;
+    height: 4rem;
 }

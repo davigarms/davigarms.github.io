@@ -1,13 +1,13 @@
 /* White colors */
 
-h3 {
+h1, h2, h3 {
     color: #569bd5;
 }
 
-/* Dark */
+/* Dark theme */
 
 .dark section#main {
-    background-color: #333334;
+    background-color: #272728;
 
 }
 
@@ -17,7 +17,7 @@ h3 {
 }
 
 .dark section#projects {
-    background-color: #333334;
+    background-color: #272728;
 
 }
 
