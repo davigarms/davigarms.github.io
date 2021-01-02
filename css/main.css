@@ -383,7 +383,7 @@ section .container {
         section#skills .container .text {
             overflow: hidden;
             text-align: left;
-            padding: 0;
+            padding: 0  ;
         }
             @media screen and (min-width: 992px) {
                 section#skills .container .text {

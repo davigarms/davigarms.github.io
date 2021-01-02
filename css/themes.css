@@ -4,7 +4,15 @@ h1, h2, h3 {
     color: #569bd5;
 }
 
-/* Dark theme */
+section button a, textarea, input, input[type=submit] {
+    color: #569bd5;
+}
+
+/* ================================================================
+                            dark theme 
+================================================================ */
+
+
 
 .dark section#main {
     background-color: #272728;
@@ -26,7 +34,7 @@ h1, h2, h3 {
 
 }
 
-.dark p, .dark input, .dark label, .dark a {
+.dark p, .dark input, .dark label, .dark button.icon a {
     color: #dadada;
 }
 
@@ -38,9 +46,9 @@ h1, h2, h3 {
     border: 1px #aaaaaa solid;
 }
 
-
-
-/* Dark colors */
+.dark button a, .dark textarea, .dark input {
+    color: #c58c74;
+}
 
 .dark h1, .dark h2, .dark h3 {
     color: #c58c74;
@@ -54,6 +62,9 @@ h1, h2, h3 {
     filter: saturate(0);
 }
 
+.dark .themes button.icon:hover {
+    background-color: #e7e7e8!important;
+}
 
 
     
