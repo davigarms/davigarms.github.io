@@ -236,32 +236,6 @@ button.icon {
     }
 
 
-.themes {
-    position: absolute;
-    z-index: 1;
-}
-
-.themes button.icon {
-    border: 0;
-    margin-top: .8rem;
-    margin-left: .9rem;
-    width: .9rem;
-    height: .9rem;
-    cursor: pointer;
-    background-color: #e7e7e8;
-}
-
-    @media screen and (min-width: 992px) {
-        .themes button.icon {
-            width: .8rem;
-            height: .8rem;
-        }
-    }
-
-.themes button.icon.dark {
-    background-color: #484848;
-}
-
     
 /* ================================================================
                             sections
@@ -357,8 +331,9 @@ section .container {
             }
         }
     
-    section#main h1 {
+    section#main .container h1 {
         line-height: 1.1;
+        margin-top: 2rem;
     }
         
 
@@ -535,12 +510,11 @@ section .container {
                 }
                    
                 section#projects .container li:hover{
-                    transform: scale(1.015,1.015);
+                    transform: scale(1.02,1.02);
                 }
                     section#projects .container li:hover img {
-                        transform: scale(1.03,1.03);
-                        filter: saturate(130%);
-                        /* filter: brightness(.3); */
+                        transform: scale(1.04,1.04);
+                        filter: brightness(.7);
                     }
 
                     section#projects .container li:hover h3 {
