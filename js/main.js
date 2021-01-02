@@ -41,7 +41,7 @@ const activateSection = (activeSection) => {
             section.classList.add('reverted');
     });
     activeSection.classList.add('active');
-    if (activeSection.querySelector("ul")) activeSection.querySelector("ul").scrollTop = 0;
+    if (activeSection.querySelector(".content")) activeSection.querySelector(".content").scrollTop = 0;
 }
 
 initEvents();
