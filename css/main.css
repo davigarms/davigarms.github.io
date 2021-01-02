@@ -416,7 +416,7 @@ section .container {
             width: 100%;
             padding: 0;
             height: 100%;
-            max-width: 1200px;
+            max-width: initial;
             justify-content: flex-start;
         }
             @media screen and (min-width: 992px) {
@@ -441,27 +441,34 @@ section .container {
                 overflow: auto;
                 padding: 1.5rem 0;
                 width: 100%;
-                margin: 0 auto;
                 flex-grow: 1;
             }
-
+            
             section#projects .container ul {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+                margin: 0 auto;
+                width: 92%;
+                max-width: 1200px;
             }
     
             section#projects .container li {
-                flex: 0 0 15rem;
+                flex: 0 0 16em;
                 position: relative;
-                margin: .2rem;
-                height: 11rem;
+                margin: 1rem;
+                height: 12rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
                 transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
             }
+                @media screen and (min-width: 768px) {
+                    section#projects .container li {
+                        margin: .3rem;
+                    }
+                }
 
             section#projects .container li h3 {
                 width: 100%;
@@ -472,7 +479,7 @@ section .container {
                 margin: 0;
                 filter: drop-shadow(2px 2px 1px rgba(0,0,0,.5));
                 opacity: 0;
-                transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
                 pointer-events: none;
                 position: absolute;
                 color: #fff;
@@ -481,13 +488,13 @@ section .container {
 
             section#projects .container li .img {
                 width: 100%;
-                transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-content: center;
                 height: 100%;
-            } 
+            }   
                 section#projects .container li .img:after {
                     content: "";
                     position: absolute;
@@ -507,8 +514,11 @@ section .container {
                     transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
                     left: 0;
                 }
+                    section#projects .container li:hover{
+                        transform: scale(1.04,1.04);
+                    }
                     section#projects .container li:hover .img {
-                        transform: scale(1.09,1.09);
+                        transform: scale(1.03,1.03);
                     }
                         section#projects .container li:hover .img img {
                             filter: saturate(130%);
