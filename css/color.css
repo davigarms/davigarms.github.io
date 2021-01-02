@@ -43,5 +43,9 @@ h1, h2, h3 {
 /* Dark colors */
 
 .dark h1, .dark h2, .dark h3 {
-    color: #569bd5;
+    color: #c58c74;
+}
+
+.dark section#projects .container li img {
+    filter: none;
 }

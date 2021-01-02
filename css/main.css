@@ -234,6 +234,33 @@ button.icon {
     button.icon span {
         opacity: 0;
     }
+
+
+.themes {
+    position: absolute;
+    z-index: 1;
+}
+
+.themes button.icon {
+    border: 0;
+    margin-top: .8rem;
+    margin-left: .8rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    background-color: #e7e7e8;
+}
+    @media screen and (min-width: 992px) {
+        .themes button.icon {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+
+.themes button.icon.dark {
+    background-color: #363637;
+}
+
     
 /* ================================================================
                             sections
@@ -247,7 +274,7 @@ section {
     scroll-snap-align: center;
 }
     section#main {
-        background-color: #e9e9e9;
+        background-color: #e7e7e8;
 
     }
 
@@ -258,7 +285,7 @@ section {
     
     section#projects {
         align-items: flex-end;
-        background-color: #e9e9e9;
+        background-color: #e7e7e8;
     }
 
     section#contact {
@@ -289,8 +316,8 @@ section .container {
     padding: 0 11%;
     justify-content: space-evenly;
 }
-@media screen and (min-width: 992px) {
-    section .container {
+    @media screen and (min-width: 992px) {
+        section .container {
             transition: all 400ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
             height: 60%;
         }

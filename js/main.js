@@ -1,14 +1,17 @@
+const wrapper = document.querySelector(".wrapper");
 const sections = Array.from(document.querySelectorAll("section"));
+const themeButton = document.querySelector("ul.themes li button");
+const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("button-nav") !== null);
+
 
 const initEvents = () => {
-    const wrapper = document.querySelector(".wrapper");
-    const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("button-nav") !== null);
-    navButtons.forEach(button =>  button.addEventListener("click", handleClick));
+    navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
+    themeButton.addEventListener("click", handleThemeClick)
     wrapper.addEventListener("scroll", handleScroll);
     activateSection(getSection(wrapper));
 }
 
-const handleClick = (e) => {
+const handleNavClick = (e) => {
     e.preventDefault();
     const targetId = document.querySelector(e.target.getAttribute("href"));
     if (window.innerWidth > 768) {
@@ -16,6 +19,11 @@ const handleClick = (e) => {
     } else {
         targetId.scrollIntoView();
     }
+}
+
+const handleThemeClick = (e) => {
+    wrapper.classList.contains("dark") ? wrapper.classList.remove("dark") :  wrapper.classList.add("dark");
+    themeButton.classList.contains("dark") ? themeButton.classList.remove("dark") :  themeButton.classList.add("dark");
 }
 
 const handleScroll = (e) => {
