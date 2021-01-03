@@ -15,22 +15,37 @@
 <body>
     <div class="dark wrapper">
         <menu>
-            <ul class="sidebar">
-                
-            </ul>
-
             <ul class="menu">
-                <li class="menu-button">
-                    <button class="icon material-icons">
+                <li class="side-menu-button">
+                    <button class="menu-icon material-icons">
                         menu
                     </button>
                 </li>
-                <li class="themes">
-                    <button class="icon material-icons">
+                <li class="themes-button">
+                    <button class="menu-icon material-icons">
                         brightness_medium
                     </button>
                 </li>
             </ul>
+
+            <div class="side-menu">
+                <div class="overlay"></div>
+                <ul>
+                    <li class="active">
+                        <a href="#main">Home</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
 
             <ul class="social desktop-only">
                 <li>
@@ -73,7 +88,7 @@
                 </p>
         
                 <button>
-                    <a href="#skills" button-nav data-content="More"></a>
+                    <a href="#skills" nav-button data-content="More"></a>
                 </button>
             </div>
         </header>

@@ -1,14 +1,24 @@
 const wrapper = document.querySelector(".wrapper");
 const sections = Array.from(document.querySelectorAll(".section"));
-const themeButton = document.querySelector("li.themes button");
-const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("button-nav") !== null);
-
+const themeButton = document.querySelector("li.themes-button button");
+const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("nav-button") !== null);
+const menuButtons = document.querySelectorAll(".side-menu ul li");
+const sideMenu = document.querySelector(".side-menu");
+const sideMenuButton = document.querySelector(".side-menu-button");
+const overlay = document.querySelector(".side-menu .overlay");
 
 const initEvents = () => {
     navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
+    menuButtons.forEach(button =>  button.addEventListener("click", handleMenuClick));
     themeButton.addEventListener("click", handleThemeClick);
+    sideMenuButton.addEventListener("click", handleMenuClick);
+    overlay.addEventListener("click", handleMenuClick);
     wrapper.addEventListener("scroll", handleScroll);
     activateSection(getSection(wrapper));
+}
+
+const handleMenuClick = (e) => {
+    sideMenu.classList.contains("active") ? sideMenu.classList.remove("active") :  sideMenu.classList.add("active");
 }
 
 const handleNavClick = (e) => {
@@ -37,18 +47,20 @@ const getSection = (wrapper) => {
             activeIndex = index;
         }
     });
-    return sections[activeIndex];
+    return activeIndex;
 }
 
-const activateSection = (activeSection) => {
+const activateSection = (activeIndex) => {
     sections.forEach((section, index) => {
+        menuButtons[index].classList.remove('active');
         section.classList.remove('active');
         section.classList.remove('reverted');
-        if (index < sections.indexOf(activeSection))
+        if (index < sections.indexOf(activeIndex))
             section.classList.add('reverted');
     });
-    activeSection.classList.add('active');
-    if (activeSection.querySelector(".content")) activeSection.querySelector(".content").scrollTop = 0;
+    sections[activeIndex].classList.add('active');
+    menuButtons[activeIndex].classList.add('active');
+    if (sections[activeIndex].querySelector(".content")) sections[activeIndex].querySelector(".content").scrollTop = 0;
 }
 
 initEvents();

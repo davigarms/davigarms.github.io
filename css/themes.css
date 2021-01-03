@@ -1,14 +1,71 @@
 /* White colors */
+.section#main {
+    background-color: #eeeeee;
+}
+
+.section#skills {
+    background-color: #dfdfe4;
+    
+}
+
+.section#projects {
+    background-color: #eeeeee;
+}
+
+.section#contact {
+    background-color: #dfdfe4;
+}
+
+button, textarea, input {
+    border: 1px #aaaaaa solid;
+}
+
+button, button a, textarea, input {
+    color: #505050;
+    background-color: #dcdcde;
+}
+
+button.icon, button.icon a {
+    background: none;
+}
+
+button a::after {
+    background-color: #4f4f51;
+    color: #dedede;
+}
+
+button.icon a:hover {
+    background-color: #5c5c5e;
+    color: #dedede;
+}
+
 h1, h2, h3 {
     color: #569cd6;
 }
 
-button.icon a {
-    /* color: #569cd6; */
+menu {
+    background-color: #b9b9be;
 }
 
-button.icon a:hover {
-    /* background-color: #569cd6; */
+.menu .menu-icon {
+    color: #4b4b4d;
+}
+
+
+.side-menu ul li.active {
+    border-left: 4px #569cd6 solid;
+}
+
+.side-menu a {
+    color: #484848;
+}
+
+.side-menu ul {
+    background-color: #d7d7e0;
+}
+
+.side-menu .overlay {
+    background-color: rgba(0, 0, 0, .4);
 }
 
 /* ================================================================
@@ -18,22 +75,22 @@ button.icon a:hover {
 
 
 .dark .section#main {
-    background-color: #303031;
+    background-color: #1c1a1a;
 
 }
 
 .dark .section#skills {
-    background-color: #272728;
+    background-color: #222121;
 
 }
 
 .dark .section#projects {
-    background-color: #303031;
+    background-color: #1c1a1a;
 
 }
 
 .dark .section#contact {
-    background-color: #272728;
+    background-color: #222121;
 
 }
 
@@ -52,10 +109,13 @@ button.icon a:hover {
 
 .dark button a, .dark textarea, .dark input {
     color: #dadada;
-    background-color: rgba(27,27,28,.3);
+    background-color: rgba(37,32,32,1);
 }
 
-
+.dark button a::after,
+.dark button.icon a:hover {
+    background-color: rgba(55,50,50,1);
+}
 
 .dark h1, .dark h2, .dark h3 {
     color: #c58c74;
@@ -69,7 +129,34 @@ button.icon a:hover {
     filter: brightness(.4);
 }
 
+.dark menu {
+    background-color: #373739;
+}
 
-.dark .menu .icon {
+.dark .menu .menu-icon {
     color: #ededed;
+}
+
+
+.dark .side-menu ul li.active {
+    border-left: 4px #c58c74 solid;
+}
+
+.dark .side-menu a {
+    color: #dadada;
+}
+
+.dark .side-menu ul {
+    background-color: #1f1d1d;
+}
+
+.dark .side-menu .overlay {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+@media screen and (min-width: 992px) {
+    .dark menu,
+    menu {
+        background: none;
+    }
 }
