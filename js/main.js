@@ -6,7 +6,7 @@ const navButtons = Array.from(document.querySelectorAll("button a")).filter(butt
 
 const initEvents = () => {
     navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
-    themeButton.addEventListener("click", handleThemeClick);
+    // themeButton.addEventListener("click", handleThemeClick);
     wrapper.addEventListener("scroll", handleScroll);
     activateSection(getSection(wrapper));
 }

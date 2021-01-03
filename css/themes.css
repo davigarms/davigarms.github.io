@@ -5,7 +5,7 @@ button.icon {
 
 
 h1, h2, h3 {
-    color: #569cd6;
+    /* color: #569cd6; */
 }
 
 button.icon a {
@@ -23,22 +23,22 @@ button.icon a:hover {
 
 
 .dark section#main {
-    background-color: #272728;
+    background-color: #303031;
 
 }
 
 .dark section#skills {
-    background-color: #363637;
-
-}
-
-.dark section#projects {
     background-color: #272728;
 
 }
 
+.dark section#projects {
+    background-color: #303031;
+
+}
+
 .dark section#contact {
-    background-color: #363637;
+    background-color: #272728;
 
 }
 
@@ -71,12 +71,9 @@ button.icon a:hover {
 }
 
 .dark section#projects .container li:hover img {
-    filter: saturate(0);
+    filter: brightness(.5);
 }
 
-.dark .themes button.icon:hover {
-    background-color: #e7e7e8!important;
-}
 
 
     
