@@ -1,7 +1,11 @@
 /* White colors */
+button.icon {
+    background:none;
+}
+
 
 h1, h2, h3 {
-    color: #007acc;
+    color: #569cd6;
 }
 
 button.icon a {
@@ -46,13 +50,17 @@ button.icon a:hover {
     color: #676767;
 }
 
-.dark button.icon {
-    /* border: 1px #c58c74 solid; */
+.dark button {
+    border: 1px #dadada solid;
 }
+
 
 .dark button a, .dark textarea, .dark input {
     color: #dadada;
+    background-color: rgba(50,50,50,.8);
 }
+
+
 
 .dark h1, .dark h2, .dark h3 {
     color: #c58c74;
