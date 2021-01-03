@@ -314,12 +314,18 @@ section .container {
 ================================================================ */
 
     section#main .container {
-        text-align: right;
-        align-items: flex-end;
+        text-align: left;
     }
-        section#main .container > * {
-            margin: 0;
+        @media screen and (min-width: 992px) {
+            section#main .container {
+                text-align: right;
+                align-items: flex-end;
+            }
         }
+    
+    section#main .container > * {
+        margin: 0;
+    }
 
     section#main p {
         font-size: 1.1rem;
@@ -366,7 +372,7 @@ section .container {
 
         section#skills .container .content {
             overflow: auto;
-            padding: 2.15rem 1.5rem;
+            padding: 2.15rem 1.3rem;
             flex-grow: 1;
         }
             @media screen and (min-width: 992px) {
@@ -383,7 +389,7 @@ section .container {
         
         section#skills .container .text {
             overflow: hidden;
-            text-align: right;
+            text-align: left;
             padding: 0;
         }
             @media screen and (min-width: 992px) {
