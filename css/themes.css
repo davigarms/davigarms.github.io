@@ -71,7 +71,7 @@ button.icon a:hover {
 }
 
 .dark section#projects .container li:hover img {
-    filter: brightness(.5);
+    filter: brightness(.4);
 }
 
 
