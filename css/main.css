@@ -129,7 +129,7 @@ button,
 button:focus,
 button:active,
 input[type=submit] {
-    background: none;
+    background-color: rgba(50,50,51,.1);
     border:1px solid #666666;
     border-radius: 0.25rem;
     font-weight: 500;
@@ -250,22 +250,22 @@ section {
     scroll-snap-align: center;
 }
     section#main {
-        background-color: #e7e7e8;
-
+        background-color: #eeeeee;
     }
-
+    
     section#skills {
         align-items: flex-end;
-        background-color: #eeeeee;
+        background-color: #e7e7e8;
+        
     }
     
     section#projects {
         align-items: flex-end;
-        background-color: #d3d3d4;
-    }
-
-    section#contact {
         background-color: #eeeeee;
+    }
+    
+    section#contact {
+        background-color: #e7e7e8;
     }
 
     @media screen and (min-width: 992px) {
