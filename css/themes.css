@@ -5,7 +5,7 @@ button.icon {
 
 
 h1, h2, h3 {
-    /* color: #569cd6; */
+    color: #569cd6;
 }
 
 button.icon a {
@@ -57,7 +57,7 @@ button.icon a:hover {
 
 .dark button a, .dark textarea, .dark input {
     color: #dadada;
-    background-color: rgba(27,27,28,.4);
+    background-color: rgba(27,27,28,.2);
 }
 
 
@@ -106,8 +106,8 @@ button.icon a:hover {
         }
 
         .themes button.icon {
-            width: .8rem;
-            height: .8rem;
+            width: 1rem;
+            height: 1rem;
         }
     }
 
@@ -115,3 +115,12 @@ button.icon a:hover {
     background-color: #656565;
     color: #ededed;
 }
+
+.themes {
+    display: none;
+}
+    @media screen and (min-width: 992px) {
+        .themes {
+            display: block;
+        }
+    }
