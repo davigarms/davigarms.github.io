@@ -1,5 +1,5 @@
 const wrapper = document.querySelector(".wrapper");
-const sections = Array.from(document.querySelectorAll("section"));
+const sections = Array.from(document.querySelectorAll(".section"));
 const themeButton = document.querySelector("ul.themes li button");
 const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("button-nav") !== null);
 

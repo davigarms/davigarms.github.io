@@ -1,9 +1,4 @@
 /* White colors */
-button.icon {
-    background:none;
-}
-
-
 h1, h2, h3 {
     color: #569cd6;
 }
@@ -22,22 +17,22 @@ button.icon a:hover {
 
 
 
-.dark section#main {
+.dark .section#main {
     background-color: #303031;
 
 }
 
-.dark section#skills {
+.dark .section#skills {
     background-color: #272728;
 
 }
 
-.dark section#projects {
+.dark .section#projects {
     background-color: #303031;
 
 }
 
-.dark section#contact {
+.dark .section#contact {
     background-color: #272728;
 
 }
@@ -57,7 +52,7 @@ button.icon a:hover {
 
 .dark button a, .dark textarea, .dark input {
     color: #dadada;
-    background-color: rgba(27,27,28,.2);
+    background-color: rgba(27,27,28,.3);
 }
 
 
@@ -66,11 +61,11 @@ button.icon a:hover {
     color: #c58c74;
 }
 
-.dark section#projects .container li img {
+.dark .section#projects .container li img {
     filter: none;
 }
 
-.dark section#projects .container li:hover img {
+.dark .section#projects .container li:hover img {
     filter: brightness(.4);
 }
 
@@ -86,7 +81,7 @@ button.icon a:hover {
 .themes {
     position: absolute;
     z-index: 1;
-    /* right: .6rem; */
+    right: .6rem;
 }
 
 .themes button.icon {
