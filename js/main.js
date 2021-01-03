@@ -1,6 +1,6 @@
 const wrapper = document.querySelector(".wrapper");
 const sections = Array.from(document.querySelectorAll(".section"));
-const themeButton = document.querySelector("ul.themes li button");
+const themeButton = document.querySelector("li.themes button");
 const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("button-nav") !== null);
 
 
@@ -23,7 +23,6 @@ const handleNavClick = (e) => {
 
 const handleThemeClick = (e) => {
     wrapper.classList.contains("dark") ? wrapper.classList.remove("dark") :  wrapper.classList.add("dark");
-    themeButton.classList.contains("dark") ? themeButton.classList.remove("dark") :  themeButton.classList.add("dark");
 }
 
 const handleScroll = (e) => {

@@ -70,52 +70,6 @@ button.icon a:hover {
 }
 
 
-
-    
-/* ================================================================
-                            themes button
-================================================================ */
-
-
-
-.themes {
-    position: absolute;
-    z-index: 1;
-    right: .6rem;
-}
-
-.themes button.icon {
-    border: 0;
-    margin-top: .8rem;
-    margin-left: .9rem;
-    width: 1rem;
-    height: 1rem;
-    cursor: pointer;
-    background-color: #cccccc;
-    line-height: 1;
-    color: #535353;
-}
-    @media screen and (min-width: 992px) {
-        .themes {
-            right: initial;
-        }
-
-        .themes button.icon {
-            width: 1rem;
-            height: 1rem;
-        }
-    }
-
-.themes button.icon.dark {
-    background-color: #656565;
+.dark .menu .icon {
     color: #ededed;
 }
-
-.themes {
-    display: none;
-}
-    @media screen and (min-width: 992px) {
-        .themes {
-            display: block;
-        }
-    }

@@ -283,7 +283,7 @@ button.icon {
 .section .container {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 60px);
+    height: calc(100% - 45px);
     margin: 0 auto;
     max-width: 700px;
     opacity: 0;
@@ -373,7 +373,7 @@ button.icon {
 
         .section#skills .container .content {
             overflow: auto;
-            padding: 2.15rem 1.3rem;
+            padding: 4.45rem 1.3rem;
             flex-grow: 1;
         }
             @media screen and (min-width: 992px) {
@@ -437,7 +437,7 @@ button.icon {
             }
     
             .section#projects .container h2 {
-                padding: 2.15rem 0 0;
+                padding: 4.45rem 0 0;
                 margin-bottom: 1.2rem;
                 text-align: center;
             }
@@ -544,7 +544,7 @@ button.icon {
         }
     }
         .section#contact .container h2 {
-            padding-top: 2.15rem;
+            padding-top: 4.45rem;
         }
         .section#contact .container .content {
             display: flex;
@@ -605,7 +605,15 @@ button.icon {
 }
 
 
+    
+/* ================================================================
+                            menu
+================================================================ */
+
+
+
 menu {
+    background-color: #373739;
     position: absolute;
     top: 0;
     left: 0;
@@ -613,4 +621,63 @@ menu {
     height: 3rem;
     margin: 0;
     padding: 0;
+    z-index: 1;
 }
+    @media screen and (min-width: 992px) {
+        menu {
+            background: none;
+        }
+    }
+
+.menu {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    top: 0.2rem;
+}
+
+
+.menu .menu-button {
+    float: left;
+    margin-left: .8rem;
+}
+    .menu .menu-button button {
+        font-size: 2rem;
+    }
+
+.menu .themes {
+    float: right;
+    margin-right: .8rem;
+}
+    .menu .themes button {
+        font-size: 1.2rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        .menu .themes {
+            float: left;
+            margin-left: .8rem;
+        }
+    }
+
+.menu .icon {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    line-height: 1;
+    margin: 0;
+    width: auto;
+    color: #404040;
+}
+
+.menu {
+    display: block;
+}
+    @media screen and (min-width: 992px) {
+        .menu {
+            display: block;
+        }
+    }
+
