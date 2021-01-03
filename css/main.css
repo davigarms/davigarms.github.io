@@ -129,7 +129,7 @@ button,
 button:focus,
 button:active,
 input[type=submit] {
-    background-color: rgba(50,50,50,.1);
+    background: none;
     border:1px solid #666666;
     border-radius: 0.25rem;
     font-weight: 500;

@@ -57,7 +57,7 @@ button.icon a:hover {
 
 .dark button a, .dark textarea, .dark input {
     color: #dadada;
-    background-color: rgba(50,50,50,.8);
+    background-color: rgba(27,27,28,.4);
 }
 
 
