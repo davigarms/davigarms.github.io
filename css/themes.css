@@ -3,7 +3,7 @@
     background-color: #eeeeee;
 }
 
-.section#skills {
+.section#experience {
     background-color: #dfdfe4;
     
 }
@@ -65,7 +65,7 @@ menu {
 }
 
 .side-menu .overlay {
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(21, 21, 24, 0.2);
 }
 
 /* ================================================================
@@ -79,7 +79,7 @@ menu {
 
 }
 
-.dark .section#skills {
+.dark .section#experience {
     background-color: #222121;
 
 }
@@ -151,7 +151,7 @@ menu {
 }
 
 .dark .side-menu .overlay {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .5);
 }
 
 @media screen and (min-width: 992px) {

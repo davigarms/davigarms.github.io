@@ -241,7 +241,7 @@ button.icon {
     position: relative;
     scroll-snap-align: center;
 }
-    .section#skills {
+    .section#experience {
         align-items: flex-end;
     }
     
@@ -327,16 +327,16 @@ button.icon {
 
 
 /* ================================================================
-                            skills
+                            experience
 ================================================================ */
 
-    .section#skills .container {
+    .section#experience .container {
         max-width: initial;
         padding: 0;
         height: 100%;
     }
         @media screen and (min-width: 992px) {
-            .section#skills .container {
+            .section#experience .container {
                 height: 90%;
                 /* flex-direction: column-reverse; */
                 justify-content: space-between;
@@ -344,57 +344,57 @@ button.icon {
             }
         }
 
-        .section#skills .container h2 {
+        .section#experience .container h2 {
             display: none;
             margin-bottom: 1.25rem;
             padding-right: 2rem;
             text-align: right;
         }
 
-        .section#skills .container .content {
+        .section#experience .container .content {
             overflow: auto;
             padding: 4.45rem 1.3rem;
             flex-grow: 1;
         }
             @media screen and (min-width: 992px) {
-                .section#skills .container .content {
+                .section#experience .container .content {
                     padding: 0 10%;
                 }
             }
 
-        .section#skills .container li {
+        .section#experience .container li {
             flex: 1 1 1px;
             position: relative;
             margin-bottom: .7rem;
         }
         
-        .section#skills .container .text {
+        .section#experience .container .text {
             overflow: hidden;
             text-align: left;
             padding: 0;
         }
             @media screen and (min-width: 992px) {
-                .section#skills .container .text {
+                .section#experience .container .text {
                     text-align: left;
                 }
             }
 
-            .section#skills .container .text h3 {
+            .section#experience .container .text h3 {
                 margin-bottom: 0.6rem;
                 font-size: 1.15rem;
             }
                  @media screen and (min-width: 992px) {
-                    .section#skills .container .text h3 {
+                    .section#experience .container .text h3 {
                         font-size: 1.1rem;
                     }
                 }
 
-            .section#skills .container .text p {
+            .section#experience .container .text p {
                 margin-top: 0;
                 font-size: .9rem;
             }
                 @media screen and (min-width: 992px) {
-                    .section#skills .container .text p {
+                    .section#experience .container .text p {
                         font-size: .8rem;
                     }
                 }
