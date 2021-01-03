@@ -1,5 +1,5 @@
 /* White colors */
-.section#main {
+.section#home {
     background-color: #eeeeee;
 }
 
@@ -74,7 +74,7 @@ menu {
 
 
 
-.dark .section#main {
+.dark .section#home {
     background-color: #1c1a1a;
 
 }

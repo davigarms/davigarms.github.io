@@ -2,19 +2,22 @@ const wrapper = document.querySelector(".wrapper");
 const sections = Array.from(document.querySelectorAll(".section"));
 const themeButton = document.querySelector("li.themes-button button");
 const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("nav-button") !== null);
-const menuButtons = document.querySelectorAll(".side-menu ul li");
+const menuItems = document.querySelectorAll(".side-menu ul li");
 const sideMenu = document.querySelector(".side-menu");
-const sideMenuButton = document.querySelector(".side-menu-button");
+const menuButton = document.querySelector(".side-menu-button");
 const overlay = document.querySelector(".side-menu .overlay");
 
-const initEvents = () => {
+const init = (e) => {
     navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
-    menuButtons.forEach(button =>  button.addEventListener("click", handleMenuClick));
+    menuItems.forEach(button =>  button.addEventListener("click", handleMenuItemClick));
     themeButton.addEventListener("click", handleThemeClick);
-    sideMenuButton.addEventListener("click", handleMenuClick);
+    menuButton.addEventListener("click", handleMenuClick);
     overlay.addEventListener("click", handleMenuClick);
     wrapper.addEventListener("scroll", handleScroll);
+    window.addEventListener("popstate", handlePopState);
     activateSection(getSection(wrapper));
+    if (window.location.href.indexOf('#')==-1)
+        history.pushState({section: "home"}, document.title, "#home");
 }
 
 const handleMenuClick = (e) => {
@@ -23,11 +26,28 @@ const handleMenuClick = (e) => {
 
 const handleNavClick = (e) => {
     e.preventDefault();
-    const targetId = document.querySelector(e.target.getAttribute("href"));
+    gotoSection(document.querySelector(e.target.getAttribute("href")));
+}
+
+const handleMenuItemClick = (e) => {
+    e.preventDefault();
+    gotoSection(document.querySelector(e.target.getAttribute("href")));
+    handleMenuClick();
+}
+
+const handlePopState = (e) => {
+    console.log(e.state)
+    if(e && e.state) {
+        location.reload(); 
+    }
+}
+
+const gotoSection = (section) => {
+    if (window.history && window.history.pushState) history.pushState({section: section.id}, document.title, "#" + section.id);
     if (window.innerWidth > 768) {
-        targetId.scrollIntoView({behavior: "smooth"});
+        section.scrollIntoView({behavior: "smooth"});
     } else {
-        targetId.scrollIntoView();
+        section.scrollIntoView();
     }
 }
 
@@ -52,15 +72,15 @@ const getSection = (wrapper) => {
 
 const activateSection = (activeIndex) => {
     sections.forEach((section, index) => {
-        menuButtons[index].classList.remove('active');
+        menuItems[index].classList.remove('active');
         section.classList.remove('active');
         section.classList.remove('reverted');
         if (index < sections.indexOf(activeIndex))
             section.classList.add('reverted');
     });
     sections[activeIndex].classList.add('active');
-    menuButtons[activeIndex].classList.add('active');
+    menuItems[activeIndex].classList.add('active');
     if (sections[activeIndex].querySelector(".content")) sections[activeIndex].querySelector(".content").scrollTop = 0;
 }
 
-initEvents();
+window.addEventListener("load", init);

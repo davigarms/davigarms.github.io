@@ -291,35 +291,35 @@ button.icon {
     
 
 /* ================================================================
-                            main
+                            home
 ================================================================ */
 
-    .section#main .container {
+    .section#home .container {
         text-align: left;
     }
         @media screen and (min-width: 992px) {
-            .section#main .container {
+            .section#home .container {
                 text-align: right;
                 align-items: flex-end;
             }
         }
     
-    .section#main .container > * {
+    .section#home .container > * {
         margin: 0;
     }
 
-    .section#main p {
+    .section#home p {
         font-size: 1.1rem;
         line-height: 1.7;
     }
         @media screen and (min-width: 992px) {
-            .section#main p {
+            .section#home p {
                 font-size: 1.2rem;
                 line-height: 1.6;
             }
         }
     
-    .section#main .container h1 {
+    .section#home .container h1 {
         line-height: 1.1;
         margin-top: 3rem;
     }
