@@ -538,24 +538,6 @@ button.icon {
 
 
 /* ================================================================
-                            social
-================================================================ */
-
-.social {
-    position: relative;
-    z-index: 1;
-}   
-    @media screen and (min-width: 992px) {
-        .social {
-            position: fixed;
-            right: 1rem;
-            top: 0.5rem;
-            z-index: 1;
-        }
-    }
-    
-
-/* ================================================================
                             helpers
 ================================================================ */
 
@@ -606,11 +588,16 @@ menu {
 
 .menu {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     top: 0;
     bottom: 0;
 }
+    @media screen and (min-width: 992px) {
+        .menu {
+            width: auto;
+        }
+    }
 
 .menu li,
 .menu li .menu-icon {
@@ -632,7 +619,6 @@ menu {
     .menu .themes-button button {
         font-size: 1.2rem;
     }
-
     @media screen and (min-width: 992px) {
         .menu .themes-button {
             float: left;
@@ -650,7 +636,7 @@ menu {
 
 .side-menu {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
 }
@@ -696,3 +682,15 @@ menu {
     line-height: 1;
 }
 
+.social {
+    position: relative;
+    z-index: 1;
+}   
+    @media screen and (min-width: 992px) {
+        .social {
+            position: fixed;
+            right: 1rem;
+            top: 0.5rem;
+        }
+    }
+    
