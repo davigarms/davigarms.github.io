@@ -16,8 +16,7 @@ const init = (e) => {
     wrapper.addEventListener("scroll", handleScroll);
     window.addEventListener("popstate", handlePopState);
     activateSection(getSection(wrapper));
-    if (window.location.href.indexOf('#')==-1)
-        history.pushState({section: "home"}, document.title, "#home");
+    if (window.location.href.indexOf('#')===-1) history.pushState({section: "home"}, document.title, "#home");
 }
 
 const handleMenuClick = (e) => {
