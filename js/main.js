@@ -1,5 +1,5 @@
 const wrapper = document.querySelector(".wrapper");
-const social = document.querySelector(".social");
+// const social = document.querySelector(".social");
 const sections = Array.from(document.querySelectorAll(".section"));
 const themeButton = document.querySelector("li.themes-button button");
 const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("nav-button") !== null);
@@ -22,8 +22,8 @@ const init = (e) => {
 
 const handleMenuClick = (e) => {
     sideMenu.classList.contains("active") ? sideMenu.classList.remove("active") :  sideMenu.classList.add("active");
-    social.classList.contains("blur") ? social.classList.remove("blur") :  social.classList.add("blur")
-    sections.forEach(section => section.classList.contains("blur") ? section.classList.remove("blur") :  section.classList.add("blur"));
+    // social.classList.contains("blur") ? social.classList.remove("blur") :  social.classList.add("blur")
+    // sections.forEach(section => section.classList.contains("blur") ? section.classList.remove("blur") :  section.classList.add("blur"));
 }
 
 const handleNavClick = (e) => {
