@@ -1,3 +1,7 @@
+body {
+    background-color: #eeeeee;
+}
+
 /* White colors */
 .section#home {
     background-color: #eeeeee;
@@ -72,7 +76,9 @@ menu {
                             dark theme 
 ================================================================ */
 
-
+body.dark {
+    background-color: #1c1a1a;
+}
 
 .dark .section#home {
     background-color: #1c1a1a;
@@ -151,7 +157,7 @@ menu {
 }
 
 .dark .side-menu .overlay {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .3);
 }
 
 @media screen and (min-width: 992px) {

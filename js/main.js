@@ -1,4 +1,5 @@
 const wrapper = document.querySelector(".wrapper");
+const social = document.querySelector(".social");
 const sections = Array.from(document.querySelectorAll(".section"));
 const themeButton = document.querySelector("li.themes-button button");
 const navButtons = Array.from(document.querySelectorAll("button a")).filter(button => button.getAttribute("nav-button") !== null);
@@ -21,6 +22,8 @@ const init = (e) => {
 
 const handleMenuClick = (e) => {
     sideMenu.classList.contains("active") ? sideMenu.classList.remove("active") :  sideMenu.classList.add("active");
+    social.classList.contains("blur") ? social.classList.remove("blur") :  social.classList.add("blur")
+    sections.forEach(section => section.classList.contains("blur") ? section.classList.remove("blur") :  section.classList.add("blur"));
 }
 
 const handleNavClick = (e) => {
@@ -35,7 +38,6 @@ const handleMenuItemClick = (e) => {
 }
 
 const handlePopState = (e) => {
-    console.log(e.state)
     if(e && e.state) {
         location.reload(); 
     }
@@ -51,11 +53,11 @@ const gotoSection = (section) => {
 }
 
 const handleThemeClick = (e) => {
-    wrapper.classList.contains("dark") ? wrapper.classList.remove("dark") :  wrapper.classList.add("dark");
+    document.body.classList.contains("dark") ? document.body.classList.remove("dark") :  document.body.classList.add("dark");
 }
 
 const handleScroll = (e) => {
-    setTimeout(() => activateSection(getSection(e.target)), 300);;
+    setTimeout(() => activateSection(getSection(e.target)), 300);
 }
 
 const getSection = (wrapper) => {
@@ -79,6 +81,7 @@ const activateSection = (activeIndex) => {
     });
     sections[activeIndex].classList.add('active');
     menuItems[activeIndex].classList.add('active');
+    if (window.history && window.history.pushState) history.pushState({section: sections[activeIndex].id}, document.title, "#" + sections[activeIndex].id);
     if (sections[activeIndex].querySelector(".content")) sections[activeIndex].querySelector(".content").scrollTop = 0;
 }
 
