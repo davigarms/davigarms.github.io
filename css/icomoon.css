@@ -28,8 +28,10 @@
 .icon-github:before {
   content: "\eab0";
 }
-.icon-linkedin {
-  top: -.13rem;
+@media screen and (min-width: 992px) {
+  .icon-linkedin {
+    top: -.13rem;
+  }
 }
 .icon-linkedin:before {
   content: "\eaca";

@@ -7,7 +7,6 @@ const menuItems = document.querySelectorAll(".side-menu ul li");
 const sideMenu = document.querySelector(".side-menu");
 const menuButton = document.querySelector(".side-menu-button");
 const overlay = document.querySelector(".side-menu .overlay");
-let isScrolling = false;
 let activeIndex;
 
 const init = (e) => {
