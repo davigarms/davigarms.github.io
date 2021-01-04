@@ -4,29 +4,34 @@ body {
 
 /* White colors */
 .section#home {
-    background-color: #dfdfe4;
+    background-color: #e2e2e3;
 }
 
 .section#experience {
-    background-color: #eeeeee;
+    background-color: #dcdcdf;
     
 }
 
 .section#projects {
-    background-color: #dfdfe4;
+    background-color: #e2e2e3;
 }
 
 .section#contact {
-    background-color: #eeeeee;
+    background-color: #dcdcdf;
 }
 
 button, textarea, input {
     border: 1px #aaaaaa solid;
 }
 
-button, button a, textarea, input {
+button, button a {
     color: #505050;
     background-color: #dcdcde;
+}
+
+textarea, input {
+    color: #505050;
+    background-color: #d2d2d5;
 }
 
 button.icon, button.icon a {
