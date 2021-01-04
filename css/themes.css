@@ -4,20 +4,20 @@ body {
 
 /* White colors */
 .section#home {
-    background-color: #eeeeee;
+    background-color: #dfdfe4;
 }
 
 .section#experience {
-    background-color: #dfdfe4;
+    background-color: #eeeeee;
     
 }
 
 .section#projects {
-    background-color: #eeeeee;
+    background-color: #dfdfe4;
 }
 
 .section#contact {
-    background-color: #dfdfe4;
+    background-color: #eeeeee;
 }
 
 button, textarea, input {
@@ -72,6 +72,9 @@ menu {
     background-color: rgba(21, 21, 24, 0.2);
 }
 
+.section#projects .container li {
+    border-bottom: .35rem solid #569cd6;
+}
 
 /* ================================================================
                             dark theme 
@@ -145,10 +148,6 @@ body.dark {
     color: #c58c74;
 }
 
-.dark .section#projects .container li img {
-    filter: none;
-}
-
 .dark menu {
     background-color: #373739;
 }
@@ -178,9 +177,6 @@ body.dark {
     background-color: rgba(0, 0, 0, .4);
 }
 
-.dark .section#projects .container li:hover img {
-    filter: brightness(.3);
-}
 
 @media screen and (min-width: 992px) {
     .dark menu,
@@ -188,3 +184,8 @@ body.dark {
         background: none;
     }
 }
+
+.dark .section#projects .container li {
+    border-bottom: .35rem solid #c58164;
+}
+

@@ -72,11 +72,11 @@ const getSection = (wrapper) => {
 const activateSection = (index) => {
     if (activeIndex==index) return;
     activeIndex = index;
-    sections.forEach((section, index) => {
-        menuItems[index].classList.remove('active');
+    sections.forEach((section, i) => {
+        menuItems[i].classList.remove('active');
         section.classList.remove('active');
         section.classList.remove('reverted');
-        if (index < sections.indexOf(index))
+        if (i < index)
             section.classList.add('reverted');
     });
     sections[index].classList.add('active');
