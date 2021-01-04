@@ -264,7 +264,7 @@ button.icon {
     opacity: 0;
     position: relative;
     transform: translateX(-70px);
-    transition: all 75ms 200ms;
+    transition: all 100ms 200ms;
     padding: 0 11%;
     justify-content: space-evenly;
 }
@@ -470,21 +470,8 @@ button.icon {
                 color: #fff;
                 transform: translateY(10px);
             }
-
-                .section#projects .container li:after {
-                    content: "";
-                    position: absolute;
-                    width: calc(100% - 30px);
-                    height: calc(100% - 30px);
-                    border: 15px rgba(0, 0, 0, .55) solid;
-                    filter: blur(1rem);
-                    top: 0;
-                    left: 0;
-                    z-index: 1;
-                }
-            
                 .section#projects .container li img {
-                    filter: brightness(.8);
+                    filter: brightness(.75);
                     height: 100%;
                     transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
                     position: absolute;
@@ -497,7 +484,7 @@ button.icon {
                 }
                     .section#projects .container li:hover img {
                         transform: scale(1.03,1.03);
-                        filter: saturate(0) brightness(.3)
+                        filter: saturate(0) brightness(.3);
                     }
 
                     .section#projects .container li:hover h3 {
