@@ -606,15 +606,15 @@ menu {
 
     .menu .themes-button {
         float: right;
-        margin-right: .9rem;
+        margin-right: .8rem;
     }
         .menu .themes-button button {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         @media screen and (min-width: 992px) {
             .menu .themes-button {
                 float: left;
-                margin-left: .8rem;
+                margin-left: .9rem;
             }
         }
 
