@@ -72,6 +72,7 @@ menu {
     background-color: rgba(21, 21, 24, 0.2);
 }
 
+
 /* ================================================================
                             dark theme 
 ================================================================ */
@@ -131,10 +132,6 @@ body.dark {
     filter: none;
 }
 
-.dark .section#projects .container li:hover img {
-    filter: brightness(.4);
-}
-
 .dark menu {
     background-color: #373739;
 }
@@ -158,6 +155,10 @@ body.dark {
 
 .dark .side-menu .overlay {
     background-color: rgba(0, 0, 0, .3);
+}
+
+.dark .section#projects .container li:hover img {
+    filter: brightness(.3);
 }
 
 @media screen and (min-width: 992px) {

@@ -7,6 +7,8 @@ const menuItems = document.querySelectorAll(".side-menu ul li");
 const sideMenu = document.querySelector(".side-menu");
 const menuButton = document.querySelector(".side-menu-button");
 const overlay = document.querySelector(".side-menu .overlay");
+let isScrolling = false;
+let activeIndex;
 
 const init = (e) => {
     navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
@@ -17,13 +19,12 @@ const init = (e) => {
     wrapper.addEventListener("scroll", handleScroll);
     window.addEventListener("popstate", handlePopState);
     activateSection(getSection(wrapper));
-    if (window.location.href.indexOf('#')===-1) history.pushState({section: "home"}, document.title, "#home");
 }
 
 const handleMenuClick = (e) => {
     sideMenu.classList.contains("active") ? sideMenu.classList.remove("active") :  sideMenu.classList.add("active");
-    // social.classList.contains("blur") ? social.classList.remove("blur") :  social.classList.add("blur")
-    // sections.forEach(section => section.classList.contains("blur") ? section.classList.remove("blur") :  section.classList.add("blur"));
+    // social.classList.contains("filter") ? social.classList.remove("filter") :  social.classList.add("filter")
+    // sections.forEach(section => section.classList.contains("filter") ? section.classList.remove("filter") :  section.classList.add("filter"));
 }
 
 const handleNavClick = (e) => {
@@ -38,13 +39,10 @@ const handleMenuItemClick = (e) => {
 }
 
 const handlePopState = (e) => {
-    if(e && e.state) {
-        location.reload(); 
-    }
+    gotoSection(document.querySelector("#"+history.state.section));
 }
 
 const gotoSection = (section) => {
-    if (window.history && window.history.pushState) history.pushState({section: section.id}, document.title, "#" + section.id);
     if (window.innerWidth > 768) {
         section.scrollIntoView({behavior: "smooth"});
     } else {
@@ -57,7 +55,9 @@ const handleThemeClick = (e) => {
 }
 
 const handleScroll = (e) => {
-    setTimeout(() => activateSection(getSection(e.target)), 300);
+    // clearTimeout(isScrolling);
+    // isScrolling =
+     setTimeout(() => activateSection(getSection(e.target)), 10);
 }
 
 const getSection = (wrapper) => {
@@ -71,18 +71,23 @@ const getSection = (wrapper) => {
     return activeIndex;
 }
 
-const activateSection = (activeIndex) => {
+const activateSection = (index) => {
+    console.log(activeIndex, index)
+    if (activeIndex==index) return;
+    activeIndex = index;
     sections.forEach((section, index) => {
         menuItems[index].classList.remove('active');
         section.classList.remove('active');
         section.classList.remove('reverted');
-        if (index < sections.indexOf(activeIndex))
+        if (index < sections.indexOf(index))
             section.classList.add('reverted');
     });
-    sections[activeIndex].classList.add('active');
-    menuItems[activeIndex].classList.add('active');
-    if (window.history && window.history.pushState) history.pushState({section: sections[activeIndex].id}, document.title, "#" + sections[activeIndex].id);
-    if (sections[activeIndex].querySelector(".content")) sections[activeIndex].querySelector(".content").scrollTop = 0;
+    sections[index].classList.add('active');
+    menuItems[index].classList.add('active');
+    
+    if (window.history && window.history.pushState) history.pushState({section: sections[index].id }, document.title, "#" + sections[index].id);
+    if (sections[index].querySelector(".content")) sections[index].querySelector(".content").scrollTop = 0;
 }
 
 window.addEventListener("load", init);
+
