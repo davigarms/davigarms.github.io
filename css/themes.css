@@ -154,7 +154,7 @@ body.dark {
 }
 
 .dark .side-menu .overlay {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .dark .section#projects .container li:hover img {

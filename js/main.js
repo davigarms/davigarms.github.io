@@ -55,8 +55,6 @@ const handleThemeClick = (e) => {
 }
 
 const handleScroll = (e) => {
-    // clearTimeout(isScrolling);
-    // isScrolling =
      setTimeout(() => activateSection(getSection(e.target)), 10);
 }
 
@@ -72,7 +70,6 @@ const getSection = (wrapper) => {
 }
 
 const activateSection = (index) => {
-    console.log(activeIndex, index)
     if (activeIndex==index) return;
     activeIndex = index;
     sections.forEach((section, index) => {
