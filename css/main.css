@@ -239,7 +239,7 @@ button.icon {
     flex: 0 0 100%;
     position: relative;
     scroll-snap-align: center;
-    transition: all 300ms;
+    transition: all 150ms;
 }
 
 .filter {
