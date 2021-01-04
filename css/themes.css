@@ -24,12 +24,7 @@ button, textarea, input {
     border: 1px #aaaaaa solid;
 }
 
-button, button a {
-    color: #505050;
-    background-color: #dcdcde;
-}
-
-textarea, input {
+button, button a, textarea, input {
     color: #505050;
     background-color: #d2d2d5;
 }
