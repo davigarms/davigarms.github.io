@@ -8,7 +8,7 @@ const menuButton = document.querySelector(".side-menu-button");
 const overlay = document.querySelector(".side-menu .overlay");
 const documentTitle = document.title;
 let activeIndex;
-let isHistoryState = false;
+let isNewState = true;
 
 const init = (e) => {
     navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
@@ -41,7 +41,7 @@ const handleNavClick = (e) => {
 }
 
 const handlePopState = (e) => {
-    isHistoryState = true;
+    isNewState = false;
     gotoSection(document.querySelector("#"+history.state.section));
 }
 
@@ -80,7 +80,7 @@ const activateSection = (index) => {
     });
     sections[index].classList.add('active');
     menuItems[index].classList.add('active');
-    if (!isHistoryState) setState(sections[index]);
+    if (isNewState) setState(sections[index]);
     if (sections[index].querySelector(".content")) sections[index].querySelector(".content").scrollTop = 0;
 }
 
@@ -88,7 +88,7 @@ const setState = (section) => {
     const title = `${section.id.substr(0,1).toUpperCase()+section.id.substr(1)} | ${documentTitle}`;
     if (window.history && window.history.pushState) history.pushState({section: section.id, title }, title, "#" + section.id);
     if (document.title !== history.state.title) document.title = history.state.title;
-    isHistoryState = false;
+    isNewState = true;
 }
 
 window.addEventListener("load", init);
