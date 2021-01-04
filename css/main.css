@@ -264,7 +264,7 @@ button.icon {
     opacity: 0;
     position: relative;
     transform: translateX(-70px);
-    transition: all 200ms 200ms;
+    transition: all 100ms 200ms;
     padding: 0 11%;
     justify-content: space-evenly;
 }
