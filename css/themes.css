@@ -128,9 +128,16 @@ body.dark {
         color: #dadada;
         background: none;
     }
-        .dark button.icon a:hover {
-            color: #373232; 
-            background-color: #dadada;
+        .dark button.icon:hover {
+            border: none;
+        }
+            .dark button.icon:hover a {
+                color: #373232; 
+                background-color: #dadada;
+            }
+
+        .dark button.icon a span {
+            color: inherit;
         }
 
 .dark textarea, .dark input {
