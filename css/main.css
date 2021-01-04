@@ -214,7 +214,7 @@ button.icon {
 
     button.icon:hover a {
         transform: initial;
-        transform: scale(1.12,1.12) translateY(0.05rem);        
+        transform: scale(1.12,1.12) translateY(0.02rem);        
     }
    
     button.icon span {
