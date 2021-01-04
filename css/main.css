@@ -205,7 +205,7 @@ button.icon {
     button.icon [class^="icon-"], 
     button.icon [class*=" icon-"] {
         font-size: 1rem;
-        line-height: 1.9rem;
+        line-height: inherit;
     }
 
     button.icon:hover {
