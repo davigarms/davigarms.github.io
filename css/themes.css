@@ -101,7 +101,7 @@ body.dark {
 
 }
 
-.dark p, .dark input, .dark label, .dark button.icon a {
+.dark p, .dark input, .dark label {
     color: #dadada;
 }
 
@@ -112,17 +112,34 @@ body.dark {
 .dark button {
     border: 1px #dadada solid;
 }
+    .dark button a {
+        color: #dadada;
+        background-color: #373232;
+    }
+        .dark button a::after {
+            color: #373232; 
+            background-color: #dadada;
+        }
 
+    .dark button.icon a {
+        color: #dadada;
+        background: none;
+    }
+        .dark button.icon a:hover {
+            color: #373232; 
+            background-color: #dadada;
+        }
 
-.dark button a, .dark textarea, .dark input {
+.dark textarea, .dark input {
     color: #dadada;
-    background-color: rgba(37,32,32,1);
+    background-color: #373232;
 }
+    .dark input[type=submit] {
+        color: #dadada;
+        background-color: #373232;
+    } 
 
-.dark button a::after,
-.dark button.icon a:hover {
-    background-color: rgba(55,50,50,1);
-}
+
 
 .dark h1, .dark h2, .dark h3 {
     color: #c58c74;
@@ -138,6 +155,10 @@ body.dark {
 
 .dark .menu .menu-icon {
     color: #ededed;
+}
+
+.dark .menu .icon {
+    color: #373232;
 }
 
 
