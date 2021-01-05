@@ -6,9 +6,9 @@ const menuItems = document.querySelectorAll(".side-menu ul li");
 const sideMenu = document.querySelector(".side-menu");
 const menuButton = document.querySelector(".side-menu-button");
 const overlay = document.querySelector(".side-menu .overlay");
-const documentTitle = document.title;
-let activeIndex;
+const documentTitle = document.title.substr(document.title.indexOf(">")+1);
 let isNewState = true;
+let activeIndex;
 
 const init = (e) => {
     navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
@@ -80,16 +80,16 @@ const activateSection = (index) => {
     });
     sections[index].classList.add('active');
     menuItems[index].classList.add('active');
-    if (isNewState) setState(sections[index]);
     if (sections[index].querySelector(".content")) sections[index].querySelector(".content").scrollTop = 0;
+    setState(sections[index]);
 }
 
 const setState = (section) => {
-    const title = `${section.id.substr(0,1).toUpperCase()+section.id.substr(1)} | ${documentTitle}`;
-    if (window.history && window.history.pushState) history.pushState({section: section.id, title }, title, "#" + section.id);
-    if (document.title !== history.state.title) document.title = history.state.title;
+    const title = `Davi Garms > ${section.id.substr(0,1).toUpperCase()+section.id.substr(1)} | ${documentTitle}`;
+    if (history.state && document.title !== history.state.title) document.title = title;
+    if (isNewState && window.history && window.history.pushState) history.pushState({section: section.id, title }, title, "#" + section.id);
     isNewState = true;
-}
+}   
 
 window.addEventListener("load", init);
 
