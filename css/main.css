@@ -12,7 +12,7 @@ html {
         }
     }
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         html {
             font-size: 16pt;
         }
@@ -38,7 +38,7 @@ p {
     font-weight: 400;
     line-height: 1.8;
 }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         p {
             font-weight: 300;
         }
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     margin: 0 0 1rem;;
 }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         h1, h2, h3, h4, h5, h6 {
             font-weight: 400;   
         }
@@ -183,7 +183,7 @@ button.icon {
     margin: 0 0.33rem;
     transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
 }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         button.icon {
             width: 2rem;
             height: 2rem;
@@ -229,11 +229,10 @@ button.icon {
 ================================================================ */
 
 .section {
-    align-items: baseline;
     display: flex;
     flex: 0 0 100%;
     position: relative;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     transition: all 150ms;
 }
     .section#experience {
@@ -244,7 +243,7 @@ button.icon {
         align-items: flex-end;
     }
     
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         .section {
             align-items: center;
         }
@@ -263,20 +262,19 @@ button.icon {
     max-width: 700px;
     opacity: 0;
     position: relative;
-    transform: translateX(-70px);
-    transition: all 100ms 200ms;
+    transition: all 200ms;
     padding: 0 11%;
     justify-content: space-evenly;
 }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         .section .container {
-            transition: all 400ms 100ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+            transform: translateX(40px);
+            transition: all 300ms 150ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
             height: 60%;
         }
-    }
-
-    .section.reverted .container {
-        transform: translateX(70px);
+        .section.reverted .container {
+            transform: translateX(-40px);
+        }
     }
 
     .section.active .container {
@@ -292,7 +290,7 @@ button.icon {
     .section#home .container {
         text-align: left;
     }
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 768px) {
             .section#home .container {
                 text-align: right;
                 align-items: flex-end;
@@ -307,7 +305,7 @@ button.icon {
         font-size: 1.1rem;
         line-height: 1.7;
     }
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 768px) {
             .section#home p {
                 font-size: 1.2rem;
                 line-height: 1.6;
@@ -330,15 +328,6 @@ button.icon {
         padding: 0;
         height: 100%;
     }
-        @media screen and (min-width: 992px) {
-            .section#experience .container {
-                height: 90%;
-                /* flex-direction: column-reverse; */
-                justify-content: space-between;
-                padding: 0;
-            }
-        }
-
         .section#experience .container h2 {
             display: none;
             margin-bottom: 1.25rem;
@@ -351,11 +340,17 @@ button.icon {
             padding: 4.45rem 1.3rem;
             flex-grow: 1;
         }
-            @media screen and (min-width: 992px) {
+
+        @media screen and (min-width: 768px) {
+            .section#experience .container {
+                height: 90%;
+                justify-content: space-between;
+                padding: 0;
+            }
                 .section#experience .container .content {
                     padding: 0 10%;
                 }
-            }
+        }
 
         .section#experience .container li {
             flex: 1 1 1px;
@@ -368,31 +363,27 @@ button.icon {
             text-align: left;
             padding: 0;
         }
-            @media screen and (min-width: 992px) {
-                .section#experience .container .text {
-                    text-align: left;
-                }
-            }
-
             .section#experience .container .text h3 {
                 margin-bottom: 0.6rem;
                 font-size: 1.15rem;
             }
-                 @media screen and (min-width: 992px) {
-                    .section#experience .container .text h3 {
-                        font-size: 1.1rem;
-                    }
-                }
 
             .section#experience .container .text p {
                 margin-top: 0;
                 font-size: .9rem;
             }
-                @media screen and (min-width: 992px) {
+
+            @media screen and (min-width: 768px) {
+                .section#experience .container .text {
+                    text-align: left;
+                }
                     .section#experience .container .text p {
                         font-size: .8rem;
                     }
-                }
+                    .section#experience .container .text h3 {
+                        font-size: 1.1rem;
+                    }
+            }
 
 /* ================================================================
                             projects
@@ -405,23 +396,21 @@ button.icon {
             max-width: initial;
             justify-content: flex-start;
         }
-            @media screen and (min-width: 992px) {
-                .section#projects .container {
-                    height: 90%;
-                }
-            }
-    
             .section#projects .container h2 {
                 padding: 4.45rem 0 0;
                 margin-bottom: 1.2rem;
                 text-align: center;
             }
-                @media screen and (min-width: 992px) {
+
+            @media screen and (min-width: 768px) {
+                .section#projects .container {
+                    height: 90%;
+                }
                     .section#projects .container h2 {
                         padding: 0 0 0 4rem;
                         text-align: left;
                     }
-                }
+            }
             
             .section#projects .container .content {
                 overflow: auto;
@@ -467,11 +456,11 @@ button.icon {
                 transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
                 pointer-events: none;
                 position: absolute;
-                color: #fff;
                 transform: translateY(10px);
             }
                 .section#projects .container li img {
-                    filter: saturate(.3) brightness(.7);
+                    filter: saturate(.3);
+                    opacity: .7;
                     height: 100%;
                     transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
                     position: absolute;
@@ -484,7 +473,8 @@ button.icon {
                 }
                     .section#projects .container li:hover img {
                         transform: scale(1.03,1.03);
-                        filter: saturate(1.2) brightness(.4);
+                        filter: saturate(1.2);
+                        opacity: .3;
                     }
 
                     .section#projects .container li:hover h3 {
@@ -499,25 +489,25 @@ button.icon {
  
     .section#contact .container {
         text-align: center;
-    }
-    @media screen and (min-width: 992px) {
-        .section#contact .container {
-            height: 70%;
-        }
+        justify-content: flex-start;
     }
         .section#contact .container h2 {
             padding-top: 4.45rem;
+        }
+        @media screen and (min-width: 768px) {
+            .section#contact .container {
+                height: 70%;
+            }
+            .section#contact .container h2 {
+                padding-top: 0;
+            }
         }
         .section#contact .container .content {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-            justify-content: space-around;
+            justify-content: space-between;
         }
-            .section#contact .container .content > * {
-                margin: 0;
-            }
-
 
 /* ================================================================
                             helpers
@@ -526,7 +516,7 @@ button.icon {
 .desktop-only {
     display: none;
 }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         .mobile-only {
             display: none;
         }
@@ -572,7 +562,7 @@ menu {
     top: 0;
     bottom: 0;
 }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         .menu {
             width: auto;
         }
@@ -598,7 +588,7 @@ menu {
         .menu .themes-button button {
             font-size: 1.3rem;
         }
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 768px) {
             .menu .themes-button {
                 float: left;
                 margin-left: .9rem;
@@ -666,7 +656,7 @@ menu {
     position: relative;
     z-index: 1;
 }   
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         .social {
             position: fixed;
             right: 1rem;
@@ -674,3 +664,6 @@ menu {
         }
     }
     
+.mt20 {
+    margin-top: 20px;
+}

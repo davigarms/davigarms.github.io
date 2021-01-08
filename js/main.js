@@ -18,7 +18,7 @@ const init = (e) => {
     overlay.addEventListener("click", handleMenuClick);
     wrapper.addEventListener("scroll", handleScroll);
     window.addEventListener("popstate", handlePopState);
-    setTimeout(() => activateSection(getSectionIndex()), 50);
+    setTimeout(() => switchSection(getSectionIndex()), 50);
 }
 
 const handleMenuClick = (e) => {
@@ -42,10 +42,11 @@ const handleNavClick = (e) => {
 
 const handlePopState = (e) => {
     isNewState = false;
-    gotoSection(document.querySelector("#"+history.state.section));
+    setTimeout(() => gotoSection(document.querySelector("#"+history.state.section)), 10);
 }
 
 const gotoSection = (section) => {
+    console.log(section)
     if (window.innerWidth > 768) {
         section.scrollIntoView({behavior: "smooth"});
     } else {
@@ -54,7 +55,7 @@ const gotoSection = (section) => {
 }
 
 const handleScroll = (e) => {
-    setTimeout(() => activateSection(getSectionIndex()), 50);
+    switchSection(getSectionIndex());
 }
 
 const getSectionIndex = () => {
@@ -68,20 +69,28 @@ const getSectionIndex = () => {
     return activeIndex;
 }
 
-const activateSection = (index) => {
+const switchSection = (index) => {
     if (activeIndex===index) return;
     activeIndex = index;
     sections.forEach((section, i) => {
         menuItems[i].classList.remove('active');
         section.classList.remove('active');
         section.classList.remove('reverted');
-        if (i < index)
-        section.classList.add('reverted');
+        if (i < index) section.classList.add('reverted');
     });
-    sections[index].classList.add('active');
-    menuItems[index].classList.add('active');
+
+    const activateSection = (index, sections, menuItems) => {
+        sections[index].classList.add('active')
+        menuItems[index].classList.add('active');
+        setTopContent(index);
+        setState(sections[index]);
+    }
+
+    setTimeout(() => activateSection(index, sections, menuItems), 350);
+}
+
+const setTopContent = (index) => {
     if (sections[index].querySelector(".content")) sections[index].querySelector(".content").scrollTop = 0;
-    setState(sections[index]);
 }
 
 const setState = (section) => {
