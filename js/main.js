@@ -11,6 +11,12 @@ let isNewState = true;
 let activeIndex;
 
 const init = (e) => {
+    initEvents();
+    const initialPage = window.location.hash === '' ?  '#home' : window.location.hash;
+    setTimeout(() => switchSection(sections.indexOf(document.querySelector(initialPage))), 50);
+}
+
+const initEvents = () => {
     navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
     menuItems.forEach(button =>  button.addEventListener("click", handleMenuItemClick));
     themeButton.addEventListener("click", handleThemeClick);
@@ -18,7 +24,6 @@ const init = (e) => {
     overlay.addEventListener("click", handleMenuClick);
     wrapper.addEventListener("scroll", handleScroll);
     window.addEventListener("popstate", handlePopState);
-    setTimeout(() => activateSection(getSectionIndex()), 50);
 }
 
 const handleMenuClick = (e) => {
@@ -42,19 +47,15 @@ const handleNavClick = (e) => {
 
 const handlePopState = (e) => {
     isNewState = false;
-    gotoSection(document.querySelector("#"+history.state.section));
+    setTimeout(() => gotoSection(document.querySelector("#"+history.state.section)), 50);
 }
 
 const gotoSection = (section) => {
-    if (window.innerWidth > 768) {
-        section.scrollIntoView({behavior: "smooth"});
-    } else {
-        section.scrollIntoView();
-    }
+    section.scrollIntoView();
 }
 
 const handleScroll = (e) => {
-    setTimeout(() => activateSection(getSectionIndex()), 50);
+    switchSection(getSectionIndex());
 }
 
 const getSectionIndex = () => {
@@ -68,20 +69,24 @@ const getSectionIndex = () => {
     return activeIndex;
 }
 
-const activateSection = (index) => {
+const switchSection = (index) => {
     if (activeIndex===index) return;
     activeIndex = index;
     sections.forEach((section, i) => {
         menuItems[i].classList.remove('active');
         section.classList.remove('active');
         section.classList.remove('reverted');
-        if (i < index)
-        section.classList.add('reverted');
+        if (i < index) section.classList.add('reverted');
     });
-    sections[index].classList.add('active');
+
+    sections[index].classList.add('active')
     menuItems[index].classList.add('active');
-    if (sections[index].querySelector(".content")) sections[index].querySelector(".content").scrollTop = 0;
+    setTopContent(index);
     setState(sections[index]);
+}
+
+const setTopContent = (index) => {
+    if (sections[index].querySelector(".content")) sections[index].querySelector(".content").scrollTop = 0;
 }
 
 const setState = (section) => {
