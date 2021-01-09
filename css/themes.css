@@ -34,7 +34,7 @@ h5 {
 }
 
 button, textarea, input {
-    border: 1px #aaaaaa solid;
+    border: 1px #949494 solid;
 }
 
 button, button a, textarea, input {
@@ -139,33 +139,31 @@ body.dark {
     color: #676767;
 }
 
-.dark button {
-    border: 1px #dadada solid;
+
+.dark button a {
+    color: #dadada;
+    background-color: #373232;
 }
-    .dark button a {
-        color: #dadada;
-        background-color: #373232;
+    .dark button a::after {
+        color: #373232; 
+        background-color: #dadada;
     }
-        .dark button a::after {
+
+.dark button.icon a {
+    color: #dadada;
+    background: none;
+}
+    .dark button.icon:hover {
+        border: none;
+    }
+        .dark button.icon:hover a {
             color: #373232; 
             background-color: #dadada;
         }
 
-    .dark button.icon a {
-        color: #dadada;
-        background: none;
+    .dark button.icon a span {
+        color: inherit;
     }
-        .dark button.icon:hover {
-            border: none;
-        }
-            .dark button.icon:hover a {
-                color: #373232; 
-                background-color: #dadada;
-            }
-
-        .dark button.icon a span {
-            color: inherit;
-        }
 
 .dark textarea, .dark input {
     color: #dadada;

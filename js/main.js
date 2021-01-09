@@ -112,14 +112,14 @@ window.addEventListener('load', function(){
     }
 
     const getSectionIndex = () => {
-        let activeIndex = 0;
+        let _activeIndex = 0;
         sections.forEach((section, index) => {
             if (wrapper.scrollLeft >= section.offsetWidth * index - window.innerWidth/2 && 
                 wrapper.scrollLeft < section.offsetWidth * (index + 1)) {
-                activeIndex = index;
+                _activeIndex = index;
             }
         });
-        return activeIndex;
+        return _activeIndex;
     }
 
     const switchSection = (index) => {
@@ -135,7 +135,7 @@ window.addEventListener('load', function(){
         sections[index].classList.add('active')
         menuItems[index].classList.add('active');
         setTopContent(index);
-        setState(sections[index]);
+        setState(sections[index].id);
     }
 
     const setTopContent = (index) => {
@@ -143,9 +143,9 @@ window.addEventListener('load', function(){
     }
 
     const setState = (section) => {
-        const title = `Davi Garms > ${section.id.substr(0,1).toUpperCase()+section.id.substr(1)} | ${documentTitle}`;
+        const title = `Davi Garms > ${section.substr(0,1).toUpperCase()+section.substr(1)} | ${documentTitle}`;
         if (history.state && document.title !== history.state.title) document.title = title;
-        if (isNewState && window.history && window.history.pushState) history.pushState({section: section.id, title }, title, '#' + section.id);
+        if (isNewState && window.history && window.history.pushState) history.pushState({section, title }, title, '#' + section);
         isNewState = true;
     }   
 
