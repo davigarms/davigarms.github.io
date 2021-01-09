@@ -197,21 +197,27 @@
                     <span class="code-tag-wrapper">&lt;</span>Contact<span class="code-tag-wrapper">/&gt;</span>
                 </h2>
                 <div class="content">
-                    <form action="">
-                        <label for="name">Name</label>
-                        <input type="te  xt" name="name" id="name">
-                        
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email">
-                    
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message"></textarea>
-                        <!-- <button id="submit"><a href="" data-content="Send"></a></button> -->
-                        <input type="submit" name="submit" id="submit" value="Send">
+                    <form action="https://formspree.io/f/xrgorllg" method="POST" id="form" name="form">
+                        <ul>
+                            <li>
+                                <label for="name">Name*</label>
+                                <input type="text" name="name" id="name" required>
+                            </li>
+                            <li>
+                                <label for="email">Email*</label>
+                                <input type="email" name="email" id="email" required>
+                            </li>
+                            <li>
+                                <label for="message">Message*</label>
+                                <textarea name="message" id="message" required></textarea>
+                            </li>
+                        </ul>
+                        <button id="submit" class="mt40"><a href="" data-content="Send"></a></button>
+                        <p id="formStatus" class="no-margin mt20"></p>
                     </form>
     
-                    <footer class="mt20">
-                        <ul class="social mobile-only">
+                    <footer>
+                        <ul class="social mt-20 mobile-only">
                             <li>
                                 <button class="icon">
                                     <a href="https://www.linkedin.com/in/davigarms/" class="icon-linkedin" target="_blank">
@@ -239,7 +245,7 @@
                                 </button>
                             </li>
                         </ul>
-                        <h5 class="center mt20">By Davi Garms</h5>
+                        <h5 class="no-margin center mt20">By Davi Garms</h5>
                     </footer>
                 </div>
             </div>

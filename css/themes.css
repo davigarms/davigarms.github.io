@@ -94,6 +94,15 @@ menu {
     bottom: 0;
 }
 
+form .error input,
+form .error textarea {
+    border-color: #660000;
+}
+
+form .error:before {
+    color: #660000;
+}
+
 /* ================================================================
                             dark theme 
 ================================================================ */
@@ -226,4 +235,14 @@ body.dark {
 
 .dark h5 {
     color: #404040;
+}
+
+
+.dark form .error input,
+.dark form .error textarea {
+    border-color: #c58c74;
+}
+
+.dark form .error:before {
+    color: #c58c74;
 }
