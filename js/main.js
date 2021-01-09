@@ -11,6 +11,12 @@ let isNewState = true;
 let activeIndex;
 
 const init = (e) => {
+    initEvents();
+    const initialPage = window.location.hash === '' ?  '#home' : window.location.hash;
+    setTimeout(() => switchSection(sections.indexOf(document.querySelector(initialPage))), 50);
+}
+
+const initEvents = () => {
     navButtons.forEach(button =>  button.addEventListener("click", handleNavClick));
     menuItems.forEach(button =>  button.addEventListener("click", handleMenuItemClick));
     themeButton.addEventListener("click", handleThemeClick);
@@ -18,7 +24,6 @@ const init = (e) => {
     overlay.addEventListener("click", handleMenuClick);
     wrapper.addEventListener("scroll", handleScroll);
     window.addEventListener("popstate", handlePopState);
-    setTimeout(() => switchSection(getSectionIndex()), 50);
 }
 
 const handleMenuClick = (e) => {
@@ -42,16 +47,11 @@ const handleNavClick = (e) => {
 
 const handlePopState = (e) => {
     isNewState = false;
-    setTimeout(() => gotoSection(document.querySelector("#"+history.state.section)), 10);
+    setTimeout(() => gotoSection(document.querySelector("#"+history.state.section)), 50);
 }
 
 const gotoSection = (section) => {
-    console.log(section)
-    if (window.innerWidth > 768) {
-        section.scrollIntoView({behavior: "smooth"});
-    } else {
-        section.scrollIntoView();
-    }
+    section.scrollIntoView();
 }
 
 const handleScroll = (e) => {
@@ -79,14 +79,10 @@ const switchSection = (index) => {
         if (i < index) section.classList.add('reverted');
     });
 
-    const activateSection = (index, sections, menuItems) => {
-        sections[index].classList.add('active')
-        menuItems[index].classList.add('active');
-        setTopContent(index);
-        setState(sections[index]);
-    }
-
-    setTimeout(() => activateSection(index, sections, menuItems), 350);
+    sections[index].classList.add('active')
+    menuItems[index].classList.add('active');
+    setTopContent(index);
+    setState(sections[index]);
 }
 
 const setTopContent = (index) => {
