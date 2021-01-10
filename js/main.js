@@ -13,7 +13,9 @@ window.addEventListener('load', function(){
     const formStatus = document.getElementById('formStatus');
     const formFields = [...form.elements].filter(i => i.required);
     let isNewState = true;
+    let prevIndex;
     let activeIndex;
+    let activeTimeout;
 
     const init = () => {
         initEvents();
@@ -104,7 +106,11 @@ window.addEventListener('load', function(){
     }
 
     const gotoSection = (section) => {
-        section.scrollIntoView();
+        if (window.innerWidth > 768) {
+            section.scrollIntoView({behavior: "smooth"});
+        } else {
+            section.scrollIntoView();
+        }
     }
 
     const handleScroll = (e) => {
@@ -122,20 +128,26 @@ window.addEventListener('load', function(){
         return _activeIndex;
     }
 
-    const switchSection = (index) => {
+    const switchSection = (index) => { 
         if (activeIndex===index) return;
+        prevIndex = activeIndex;
         activeIndex = index;
         sections.forEach((section, i) => {
             menuItems[i].classList.remove('active');
             section.classList.remove('active');
-            section.classList.remove('reverted');
-            if (i < index) section.classList.add('reverted');
+            i < index && section.classList.add('reverted');
         });
 
-        sections[index].classList.add('active')
-        menuItems[index].classList.add('active');
-        setTopContent(index);
-        setState(sections[index].id);
+        const activateSection = (index, sections, menuItems) => {
+            sections[index].classList.add('active');
+            menuItems[index].classList.add('active');
+            setTopContent(index);
+            setState(sections[index].id);
+            sections.forEach((section, i) => i >= index && section.classList.remove('reverted'));
+        }
+    
+        clearTimeout(activeTimeout);
+        activeTimeout = setTimeout(() => activateSection(index, sections, menuItems), 300);
     }
 
     const setTopContent = (index) => {
