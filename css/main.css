@@ -543,14 +543,12 @@ button.icon {
             }
 
             @media screen and (min-width: 769px) {
-                .section#contact .container .spacer {
-                    height: initial;
-                }
                 .section#contact .container {
                     justify-content: center;
                     height: 90%;
                 }
-                    .section#contact .container .content {
+                .section#contact .container .content {
+                        overflow: auto;
                         padding: 0 20%;
                         display: block;
                         flex-grow: initial;
@@ -558,6 +556,14 @@ button.icon {
                 
                     .section#contact .container h2 {
                         padding: 0;
+                    }
+
+                    .section#contact .container .spacer {
+                        height: initial;
+                    }
+
+                    .section#contact .container h5 {
+                        display: inline;
                     }
             }
 
