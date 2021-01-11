@@ -13,7 +13,6 @@ window.addEventListener('load', function(){
     const formStatus = document.getElementById('formStatus');
     const formFields = [...form.elements].filter(i => i.required);
     let isNewState = true;
-    let prevIndex;
     let activeIndex;
     let activeTimeout;
 
@@ -130,7 +129,6 @@ window.addEventListener('load', function(){
 
     const switchSection = (index) => { 
         if (activeIndex===index) return;
-        prevIndex = activeIndex;
         activeIndex = index;
         sections.forEach((section, i) => {
             menuItems[i].classList.remove('active');
