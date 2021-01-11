@@ -530,7 +530,7 @@ button.icon {
        
         .section#contact .container .content {
             overflow: auto;
-            padding: 1rem 10%;
+            padding: 1.5rem;
         }
             @media screen and (min-width: 768px) {
                 .section#contact .container .spacer {
@@ -539,7 +539,7 @@ button.icon {
                 .section#contact .container {
                     justify-content: center;
                     height: 90%;
-                    padding: 0 10%;
+                    padding: 0 20%;
                 }
                     .section#contact .container h2 {
                         padding: 0;
