@@ -532,7 +532,17 @@ button.icon {
             overflow: auto;
             padding: 0.6rem 1.5rem;
         }
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 767px) {
+                .section#contact .container .content {
+                    flex-grow:1;
+                    justify-content: space-around;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 5rem;
+                }
+            }
+
+            @media screen and (min-width: 769px) {
                 .section#contact .container .spacer {
                     height: initial;
                 }
@@ -542,6 +552,8 @@ button.icon {
                 }
                     .section#contact .container .content {
                         padding: 0 20%;
+                        display: block;
+                        flex-grow: initial;
                     }
                 
                     .section#contact .container h2 {
