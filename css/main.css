@@ -204,7 +204,8 @@ button.icon {
     height: 2.5rem;
     line-height: 2.3rem;
     margin: 0 0.33rem;
-    transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+    /* transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.550);  */
+    /* overflow: hidden; */
 }
     @media screen and (min-width: 768px) {
         button.icon {
@@ -232,12 +233,13 @@ button.icon {
     }
 
     button.icon:hover {
-        transform: scale(1.07,1.07);
+        /* transform: scale(1.07,1.07); */
     }
 
     button.icon:hover a {
         transform: initial;
-        transform: scale(1.12,1.12) translateY(0.02rem);        
+        transform: scale(1.35,1.35) translateY(-0.02rem);        
+        /* -webkit-transform: scale(1.12,1.12) translateY(0.02rem);         */
     }
    
     button.icon span {
@@ -286,7 +288,6 @@ button.icon {
     flex-direction: column;
     height: calc(100% - 45px);
     margin: 0 auto;
-    max-width: 700px;
     opacity: 0;
     position: relative;
     transition: all 200ms;
@@ -315,34 +316,91 @@ button.icon {
 
     .section#home .container {
         text-align: left;
+        max-width: 700px;
+        padding: 0 11% 0 10%;
+        justify-content: center;
     }
         @media screen and (min-width: 768px) {
             .section#home .container {
-                text-align: right;
-                align-items: flex-end;
-                max-height: 540px;
+                /* text-align: right; */
+                /* align-items: flex-end; */
+                /* max-height: 480px; */
+                
+                padding: 0 8% 0 12%;
             }
         }
-    
+     
     .section#home .container > * {
         margin: 0;
     }
 
-    .section#home p {
+    .section#home .container p {
         font-size: 1.1rem;
         line-height: 1.7;
+        margin: 1rem 0 1.4rem;
     }
         @media screen and (min-width: 768px) {
-            .section#home p {
-                font-size: 1.2rem;
+            .section#home .container p {
+                font-size: 1.19rem;
                 line-height: 1.6;
+                /* margin: 0; */
+                /* margin-bottom: 0.5ren; */
+            }
+        }
+
+        .section#home p .cursor {
+            position: relative;
+        }
+
+        .section#home p .cursor::after {
+            display: none;
+            position: absolute;
+            bottom: .1rem;
+            right: -1rem;
+            content: "";
+            width: .7rem;
+            height: 85%;
+            background-color: #fff;
+            animation: .4s linear .8s infinite alternate blink;
+        } 
+            @media screen and (min-width: 768px) {
+                .section#home p .cursor {
+                    display: inline-block;
+                    width: 5.5rem;
+                }
+                    .section#home p .cursor::after {
+                        display: block;
+                        right: 0;
+                    }
+            }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            49% {
+                opacity: 0;
+            }
+        
+            50% {
+                opacity: 1;
+            }
+        
+            100% {
+                opacity: 1;
             }
         }
     
     .section#home .container h1 {
         line-height: 1.1;
-        margin-top: 3rem;
+        margin-top: 3.25rem;
     }
+    @media screen and (min-width: 768px) {
+        .section#home .container h1 {
+                margin-top: 0;
+            }
+        }
         
 
 
