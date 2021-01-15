@@ -34,12 +34,17 @@ h5 {
 }
 
 button, textarea, input {
-    border: 1px #949494 solid;
+    border-bottom: 1px #949494 solid; 
 }
 
-button, button a, textarea, input {
+button a {
     color: #505050;
-    background-color: #d2d2d5;
+    background-color: #c9c9cd;
+}
+
+textarea, input {
+    color: #505050;
+    background-color: #d4d4da;
 }
 
 button.icon, button.icon a {
@@ -49,6 +54,10 @@ button.icon, button.icon a {
 button a::after {
     background-color: #4f4f51;
     color: #dedede;
+}
+
+button.icon {
+    border: 1px #949494 solid; 
 }
 
 button.icon a:hover {
@@ -101,6 +110,10 @@ form .error textarea {
 
 form .error:before {
     color: #660000;
+}
+
+.section#home p .cursor::after {
+    background-color: #414040;
 }
 
 /* ================================================================
@@ -166,15 +179,10 @@ body.dark {
     }
 
 .dark textarea, .dark input {
-    color: #dadada;
-    background-color: #373232;
+    background-color: #282626;
+    border-bottom: 1px #949494 solid; 
 }
-    .dark input[type=submit] {
-        color: #dadada;
-        background-color: #373232;
-    } 
-
-
+   
 
 .dark h1, .dark h2, .dark h3 {
     color: #c58c74;
@@ -243,4 +251,8 @@ body.dark {
 
 .dark form .error:before {
     color: #c58c74;
+}
+
+.dark .section#home p .cursor::after {
+    background-color: #fff;
 }

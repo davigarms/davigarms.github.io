@@ -124,7 +124,6 @@ form li {
 
 input, textarea {
     background: none;
-    border-radius: 0.15rem;
     color: #222222;
     font-size: 0.825rem;
     font-weight: 400;
@@ -147,11 +146,16 @@ textarea {
                             buttons
 ================================================================ */
 
+input, textarea, button, button a {
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
 button,
 button:focus,
 button:active,
 input[type=submit] {
-    border-radius: 0.15rem;
     font-weight: 500;
     height: 2.8rem;
     line-height: 2.6rem;
@@ -353,14 +357,13 @@ button.icon {
         }
 
         .section#home p .cursor::after {
-            display: none;
+            /* display: none; */
             position: absolute;
             bottom: .1rem;
             right: -1rem;
             content: "";
             width: .7rem;
             height: 85%;
-            background-color: #fff;
             animation: .4s linear .8s infinite alternate blink;
         } 
             @media screen and (min-width: 768px) {
