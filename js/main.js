@@ -11,7 +11,7 @@ window.addEventListener('load', function(){
     const form = document.getElementById('form');
     const submitButton = document.getElementById('submit');
     const formStatus = document.getElementById('formStatus');
-    const label = document.querySelectorAll('label');
+    const formLabels = document.querySelectorAll('label');
     const formFields = [...form.elements].filter(i => i.required);
     let isNewState = true;
     let activeIndex;
@@ -19,6 +19,7 @@ window.addEventListener('load', function(){
 
     const init = () => {
         initEvents();
+        formLabels.forEach((l, i) => formFields[i].value==="" ? l.classList.remove('active') : l.classList.add('active'));
         const initialPage = window.location.hash === '' ?  '#home' : window.location.hash;
         setTimeout(() => switchSection(sections.indexOf(document.querySelector(initialPage))), 50);
     }
@@ -50,12 +51,12 @@ window.addEventListener('load', function(){
 
     const handleFocus = (e) => {
         e.target.parentElement.classList.remove('error');
-        [...label].filter(i => i.getAttribute('for')===e.target.name)[0].classList.add('active');
+        [...formLabels].filter(i => i.getAttribute('for')===e.target.name)[0].classList.add('active');
     }
 
     const handleBlur = (e) => {
         if (e.target.value==="")
-            [...label].filter(i => i.getAttribute('for')===e.target.name)[0].classList.remove('active');
+            [...formLabels].filter(i => i.getAttribute('for')===e.target.name)[0].classList.remove('active');
     }
 
     const handleSubmit = (e) => {
@@ -171,4 +172,3 @@ window.addEventListener('load', function(){
 
     init();
 });
-

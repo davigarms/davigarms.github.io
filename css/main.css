@@ -107,9 +107,9 @@ label {
     }
 
 label.active {
-    top: 0.95rem;
-    left: -.2rem;
-    transform: scale(.8);
+    top: 0.9rem;
+    left: -.225rem;
+    transform: scale(.9);
 }
 
 a {
@@ -224,13 +224,8 @@ button a {
 }
 
 button#submit {
-    margin: 1.1rem 0 .3rem;
+    margin: 2rem 0 .4rem;
 }
-    @media screen and (min-width: 768px) {
-        button#submit {
-            margin-top: 1.875rem;
-        }
-    }
 
 button.icon {
     border-radius: 50%;
@@ -353,15 +348,15 @@ button.icon {
         max-width: 700px;
         padding: 0 11%;
         justify-content: center;
-        left:-.3rem;
-        top:-.3rem;
+        top:-.4rem;
     }
         @media screen and (min-width: 768px) {
             .section#home .container {
                 /* text-align: right; */
                 /* align-items: flex-end; */
                 /* max-height: 480px; */
-                left:1rem;
+                left:1.5rem;
+                top: 0;
             }
         }
      
@@ -388,7 +383,7 @@ button.icon {
         }
 
         .section#home p .cursor::after {
-            /* display: none; */
+            display: none;
             position: absolute;
             bottom: .1rem;
             right: -1.2rem;
@@ -622,7 +617,7 @@ button.icon {
        
         .section#contact .container .content {
             overflow: auto;
-            padding: 0.6rem 2rem;
+            padding: 0.4rem 2rem;
         }
             @media screen and (min-width: 767px) {
                 .section#contact .container .content {
@@ -817,7 +812,10 @@ menu {
         }
     }
 
-    
+#formStatus {
+    margin: 1.7rem 0;
+}
+
 .no-margin {
     margin: 0;
 }
