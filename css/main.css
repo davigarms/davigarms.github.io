@@ -4,11 +4,23 @@
 ================================================================ */
 
 html {
-    font-size: 11pt;
+    font-size: 11.5pt;
 }
     @media screen and (min-width: 360px) {
         html {
             font-size: 13pt;
+        }
+    }
+
+    @media screen and (min-width: 375px) {
+        html {
+            font-size: 13.5pt;
+        }
+    }
+
+    @media screen and (min-width: 414px) {
+        html {
+            font-size: 15pt;
         }
     }
 
@@ -80,12 +92,24 @@ h2 {
 label {
     color: #666666;
     float: left;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     font-weight: 400;
-    left: 0;
-    top: 0.95rem;
+    left: .4rem;
+    top: 2.8rem;
     padding-left: 0.3rem;
     position: relative;
+    transition: all 400ms cubic-bezier(0.075, 0.820, 0.165, 1.000); 
+}
+    @media screen and (min-width: 768px) {
+        label {
+            font-size: 0.7rem;
+        }
+    }
+
+label.active {
+    top: 0.95rem;
+    left: -.2rem;
+    transform: scale(.8);
 }
 
 a {
@@ -123,6 +147,8 @@ form li {
         }
 
 input, textarea {
+    /* border-radius: .25rem; */
+    border: none;
     background: none;
     color: #222222;
     font-size: 0.825rem;
@@ -137,7 +163,7 @@ input, textarea {
 }
 
 textarea {
-    height: 5.5rem;
+    height: 5rem;
     resize: none;
     width: calc(100% - 1.75rem);
 }
@@ -146,16 +172,15 @@ textarea {
                             buttons
 ================================================================ */
 
-input, textarea, button, button a {
+button, button a {
+    /* border-radius: .25rem; */
     border: none;
-    border-radius: 0;
     background: none;
 }
 
 button,
 button:focus,
-button:active,
-input[type=submit] {
+button:active {
     font-weight: 500;
     height: 2.8rem;
     line-height: 2.6rem;
@@ -173,6 +198,7 @@ input[type=submit] {
         top: 0;
         width: 100%;
         font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+        z-index: 1;
     }
         button a::before {
             content: attr(data-content);
@@ -191,16 +217,20 @@ input[type=submit] {
                 transform: translateY(-100%);
             }
 
-button a,
-input[type=submit] {
+button a {
     font-size: .9rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-input[type=submit] {
-    margin-top: 1.875rem;
+button#submit {
+    margin: 1.1rem 0 .3rem;
 }
+    @media screen and (min-width: 768px) {
+        button#submit {
+            margin-top: 1.875rem;
+        }
+    }
 
 button.icon {
     border-radius: 50%;
@@ -321,16 +351,17 @@ button.icon {
     .section#home .container {
         text-align: left;
         max-width: 700px;
-        padding: 0 11% 0 10%;
+        padding: 0 11%;
         justify-content: center;
+        left:-.3rem;
+        top:-.3rem;
     }
         @media screen and (min-width: 768px) {
             .section#home .container {
                 /* text-align: right; */
                 /* align-items: flex-end; */
                 /* max-height: 480px; */
-                
-                padding: 0 8% 0 12%;
+                left:1rem;
             }
         }
      
@@ -341,7 +372,7 @@ button.icon {
     .section#home .container p {
         font-size: 1.1rem;
         line-height: 1.7;
-        margin: 1rem 0 1.4rem;
+        margin: .8rem 0 1.4rem;
     }
         @media screen and (min-width: 768px) {
             .section#home .container p {
@@ -360,7 +391,7 @@ button.icon {
             /* display: none; */
             position: absolute;
             bottom: .1rem;
-            right: -1rem;
+            right: -1.2rem;
             content: "";
             width: .7rem;
             height: 85%;
@@ -769,8 +800,8 @@ menu {
             }
 
         .side-menu a {
-            font-size: 1.2rem;
-            margin-left: .5rem;
+            font-size: 1.3rem;
+            margin-left: .35rem;
             line-height: 1;
         }
 

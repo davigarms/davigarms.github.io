@@ -33,13 +33,30 @@ h5 {
     background-color: #000;
 }
 
-button, textarea, input {
-    border-bottom: 1px #949494 solid; 
+button.nav-button::after,
+button#submit::after  {
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: #949494;
+    z-index: 2;
+}
+
+button.nav-button:hover::after,
+button#submit:hover::after  {
+    background: none;
+}
+
+textarea, input {
+    border-bottom: 3px #949494 solid; 
 }
 
 button a {
     color: #505050;
-    background-color: #c9c9cd;
+    background-color: #cacad3;
 }
 
 textarea, input {
@@ -152,6 +169,10 @@ body.dark {
     color: #676767;
 }
 
+.dark button, .dark textarea, .dark input {
+    background-color: #282626;
+    color: #dadada;
+}
 
 .dark button a {
     color: #dadada;
@@ -178,10 +199,7 @@ body.dark {
         color: inherit;
     }
 
-.dark textarea, .dark input {
-    background-color: #282626;
-    border-bottom: 1px #949494 solid; 
-}
+
    
 
 .dark h1, .dark h2, .dark h3 {

@@ -11,6 +11,7 @@ window.addEventListener('load', function(){
     const form = document.getElementById('form');
     const submitButton = document.getElementById('submit');
     const formStatus = document.getElementById('formStatus');
+    const label = document.querySelectorAll('label');
     const formFields = [...form.elements].filter(i => i.required);
     let isNewState = true;
     let activeIndex;
@@ -26,7 +27,10 @@ window.addEventListener('load', function(){
         wrapper.addEventListener('scroll', handleScroll);
         navButtons.forEach(i =>  i.addEventListener('click', handleNavClick));
         menuItems.forEach(i =>  i.addEventListener('click', handleMenuItemClick));
-        formFields.forEach(i => i.addEventListener('focus', handleFocus));
+        formFields.forEach(i => {
+            i.addEventListener('blur', handleBlur)
+            i.addEventListener('focus', handleFocus)
+        });
         submitButton.addEventListener('click', handleSubmit);
         themeButton.addEventListener('click', handleThemeClick);
         menuButton.addEventListener('click', handleMenuClick);
@@ -46,6 +50,12 @@ window.addEventListener('load', function(){
 
     const handleFocus = (e) => {
         e.target.parentElement.classList.remove('error');
+        [...label].filter(i => i.getAttribute('for')===e.target.name)[0].classList.add('active');
+    }
+
+    const handleBlur = (e) => {
+        if (e.target.value==="")
+            [...label].filter(i => i.getAttribute('for')===e.target.name)[0].classList.remove('active');
     }
 
     const handleSubmit = (e) => {
