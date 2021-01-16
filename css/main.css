@@ -799,6 +799,11 @@ menu {
             margin-left: .35rem;
             line-height: 1;
         }
+            @media screen and (min-width: 768px) {
+                .side-menu a {
+                    font-size: 1.1rem;
+                }
+            }
 
 .social {
     position: relative;
